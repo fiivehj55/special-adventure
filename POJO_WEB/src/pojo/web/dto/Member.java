@@ -1,5 +1,7 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
+import java.sql.Blob;
 
 /**
  * MEMBER 모델 클래스.
@@ -13,46 +15,28 @@ public class Member implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** MEM_ID. */
-	private Integer memId;
+	private String memId;
 
 	/** MEM_NAME. */
 	private String memName;
 
+	/** MEM_PASSWORD. */
+	private String memPassword;
+
 	/** MEM_PHONE. */
 	private Integer memPhone;
 
-	/** MEM_PASSWORD. */
-	private String memPassword;
-	
-	private AdminDetail adminDetail;
-	
-	private CustomerDetail customerDetail;
-	
-	private RegisterDetail registerDetail;
+	/** MEM_EMAIL. */
+	private String memEmail;
 
-	public AdminDetail getAdminDetail() {
-		return adminDetail;
-	}
+	/** MEM_GENDER. */
+	private String memGender;
 
-	public void setAdminDetail(AdminDetail adminDetail) {
-		this.adminDetail = adminDetail;
-	}
+	/** MEM_IMG. */
+	private Blob memImg;
 
-	public CustomerDetail getCustomerDetail() {
-		return customerDetail;
-	}
-
-	public void setCustomerDetail(CustomerDetail customerDetail) {
-		this.customerDetail = customerDetail;
-	}
-
-	public RegisterDetail getRegisterDetail() {
-		return registerDetail;
-	}
-
-	public void setRegisterDetail(RegisterDetail registerDetail) {
-		this.registerDetail = registerDetail;
-	}
+	/** MEM_INTRO. */
+	private String memIntro;
 
 	/**
 	 * 생성자.
@@ -66,7 +50,7 @@ public class Member implements Serializable {
 	 * @param memId
 	 *            MEM_ID
 	 */
-	public void setMemId(Integer memId) {
+	public void setMemId(String memId) {
 		this.memId = memId;
 	}
 
@@ -75,7 +59,7 @@ public class Member implements Serializable {
 	 * 
 	 * @return MEM_ID
 	 */
-	public Integer getMemId() {
+	public String getMemId() {
 		return this.memId;
 	}
 
@@ -99,6 +83,25 @@ public class Member implements Serializable {
 	}
 
 	/**
+	 * MEM_PASSWORD을 설정합니다..
+	 * 
+	 * @param memPassword
+	 *            MEM_PASSWORD
+	 */
+	public void setMemPassword(String memPassword) {
+		this.memPassword = memPassword;
+	}
+
+	/**
+	 * MEM_PASSWORD을 가져옵니다..
+	 * 
+	 * @return MEM_PASSWORD
+	 */
+	public String getMemPassword() {
+		return this.memPassword;
+	}
+
+	/**
 	 * MEM_PHONE을 설정합니다..
 	 * 
 	 * @param memPhone
@@ -118,23 +121,115 @@ public class Member implements Serializable {
 	}
 
 	/**
-	 * MEM_PASSWORD을 설정합니다..
+	 * MEM_EMAIL을 설정합니다..
 	 * 
-	 * @param memPassword
-	 *            MEM_PASSWORD
+	 * @param memEmail
+	 *            MEM_EMAIL
 	 */
-	public void setMemPassword(String memPassword) {
-		this.memPassword = memPassword;
+	public void setMemEmail(String memEmail) {
+		this.memEmail = memEmail;
 	}
 
 	/**
-	 * MEM_PASSWORD을 가져옵니다..
+	 * MEM_EMAIL을 가져옵니다..
 	 * 
-	 * @return MEM_PASSWORD
+	 * @return MEM_EMAIL
 	 */
-	public String getMemPassword() {
-		return this.memPassword;
+	public String getMemEmail() {
+		return this.memEmail;
 	}
 
+	/**
+	 * MEM_GENDER을 설정합니다..
+	 * 
+	 * @param memGender
+	 *            MEM_GENDER
+	 */
+	public void setMemGender(String memGender) {
+		this.memGender = memGender;
+	}
+
+	/**
+	 * MEM_GENDER을 가져옵니다..
+	 * 
+	 * @return MEM_GENDER
+	 */
+	public String getMemGender() {
+		return this.memGender;
+	}
+
+	/**
+	 * MEM_IMG을 설정합니다..
+	 * 
+	 * @param memImg
+	 *            MEM_IMG
+	 */
+	public void setMemImg(Blob memImg) {
+		this.memImg = memImg;
+	}
+
+	/**
+	 * MEM_IMG을 가져옵니다..
+	 * 
+	 * @return MEM_IMG
+	 */
+	public Blob getMemImg() {
+		return this.memImg;
+	}
+
+	/**
+	 * MEM_INTRO을 설정합니다..
+	 * 
+	 * @param memIntro
+	 *            MEM_INTRO
+	 */
+	public void setMemIntro(String memIntro) {
+		this.memIntro = memIntro;
+	}
+
+	/**
+	 * MEM_INTRO을 가져옵니다..
+	 * 
+	 * @return MEM_INTRO
+	 */
+	public String getMemIntro() {
+		return this.memIntro;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((memId == null) ? 0 : memId.hashCode());
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Member other = (Member) obj;
+		if (memId == null) {
+			if (other.memId != null) {
+				return false;
+			}
+		} else if (!memId.equals(other.memId)) {
+			return false;
+		}
+		return true;
+	}
 
 }

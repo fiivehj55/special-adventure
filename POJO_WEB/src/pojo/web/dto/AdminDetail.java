@@ -1,7 +1,6 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * ADMIN_DETAIL 모델 클래스.
@@ -15,37 +14,12 @@ public class AdminDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** ADMIN_ID. */
-	private Integer adminId;
-
-	/** ADMIN_GRADE. */
-	private String adminGrade;
-	
-	/** MEMBER */
-	private Member member;
-	
-	private Set<Member> memberSet;
-
-	public Set<Member> getMemberSet() {
-		return memberSet;
-	}
-
-	public void setMemberSet(Set<Member> memberSet) {
-		this.memberSet = memberSet;
-	}
-
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
+	private String adminId;
 
 	/**
 	 * 생성자.
 	 */
 	public AdminDetail() {
-		this.memberSet = new HashSet<Member>();
 	}
 
 	/**
@@ -54,7 +28,7 @@ public class AdminDetail implements Serializable {
 	 * @param adminId
 	 *            ADMIN_ID
 	 */
-	public void setAdminId(Integer adminId) {
+	public void setAdminId(String adminId) {
 		this.adminId = adminId;
 	}
 
@@ -63,28 +37,44 @@ public class AdminDetail implements Serializable {
 	 * 
 	 * @return ADMIN_ID
 	 */
-	public Integer getAdminId() {
+	public String getAdminId() {
 		return this.adminId;
 	}
 
 	/**
-	 * ADMIN_GRADE을 설정합니다..
-	 * 
-	 * @param adminGrade
-	 *            ADMIN_GRADE
+	 * {@inheritDoc}
 	 */
-	public void setAdminGrade(String adminGrade) {
-		this.adminGrade = adminGrade;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((adminId == null) ? 0 : adminId.hashCode());
+		return result;
 	}
 
 	/**
-	 * ADMIN_GRADE을 가져옵니다..
-	 * 
-	 * @return ADMIN_GRADE
+	 * {@inheritDoc}
 	 */
-	public String getAdminGrade() {
-		return this.adminGrade;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		AdminDetail other = (AdminDetail) obj;
+		if (adminId == null) {
+			if (other.adminId != null) {
+				return false;
+			}
+		} else if (!adminId.equals(other.adminId)) {
+			return false;
+		}
+		return true;
 	}
-
 
 }

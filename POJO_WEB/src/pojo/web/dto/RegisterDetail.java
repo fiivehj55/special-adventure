@@ -1,7 +1,6 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
-import java.sql.Blob;
-import java.util.Set;
 
 /**
  * REGISTER_DETAIL 모델 클래스.
@@ -15,40 +14,7 @@ public class RegisterDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** REGIST_ID. */
-	private Integer registId;
-
-	/** REGIST_EMAIL. */
-	private String registEmail;
-
-	/** REGIST_GENDER. */
-	private String registGender;
-
-	/** REGIST_IMG. */
-	private Blob registImg;
-
-	/** REGIST_INTRO. */
-	private String registIntro;
-	
-	/** MEMBER */
-	private Member member;
-	
-	private Set<Member> memberSet;
-	
-	public Set<Member> getMemberSet() {
-		return memberSet;
-	}
-
-	public void setMemberSet(Set<Member> memberSet) {
-		this.memberSet = memberSet;
-	}
-
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
+	private String registId;
 
 	/**
 	 * 생성자.
@@ -62,7 +28,7 @@ public class RegisterDetail implements Serializable {
 	 * @param registId
 	 *            REGIST_ID
 	 */
-	public void setRegistId(Integer registId) {
+	public void setRegistId(String registId) {
 		this.registId = registId;
 	}
 
@@ -71,85 +37,44 @@ public class RegisterDetail implements Serializable {
 	 * 
 	 * @return REGIST_ID
 	 */
-	public Integer getRegistId() {
+	public String getRegistId() {
 		return this.registId;
 	}
 
 	/**
-	 * REGIST_EMAIL을 설정합니다..
-	 * 
-	 * @param registEmail
-	 *            REGIST_EMAIL
+	 * {@inheritDoc}
 	 */
-	public void setRegistEmail(String registEmail) {
-		this.registEmail = registEmail;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((registId == null) ? 0 : registId.hashCode());
+		return result;
 	}
 
 	/**
-	 * REGIST_EMAIL을 가져옵니다..
-	 * 
-	 * @return REGIST_EMAIL
+	 * {@inheritDoc}
 	 */
-	public String getRegistEmail() {
-		return this.registEmail;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		RegisterDetail other = (RegisterDetail) obj;
+		if (registId == null) {
+			if (other.registId != null) {
+				return false;
+			}
+		} else if (!registId.equals(other.registId)) {
+			return false;
+		}
+		return true;
 	}
-
-	/**
-	 * REGIST_GENDER을 설정합니다..
-	 * 
-	 * @param registGender
-	 *            REGIST_GENDER
-	 */
-	public void setRegistGender(String registGender) {
-		this.registGender = registGender;
-	}
-
-	/**
-	 * REGIST_GENDER을 가져옵니다..
-	 * 
-	 * @return REGIST_GENDER
-	 */
-	public String getRegistGender() {
-		return this.registGender;
-	}
-
-	/**
-	 * REGIST_IMG을 설정합니다..
-	 * 
-	 * @param registImg
-	 *            REGIST_IMG
-	 */
-	public void setRegistImg(Blob registImg) {
-		this.registImg = registImg;
-	}
-
-	/**
-	 * REGIST_IMG을 가져옵니다..
-	 * 
-	 * @return REGIST_IMG
-	 */
-	public Blob getRegistImg() {
-		return this.registImg;
-	}
-
-	/**
-	 * REGIST_INTRO을 설정합니다..
-	 * 
-	 * @param registIntro
-	 *            REGIST_INTRO
-	 */
-	public void setRegistIntro(String registIntro) {
-		this.registIntro = registIntro;
-	}
-
-	/**
-	 * REGIST_INTRO을 가져옵니다..
-	 * 
-	 * @return REGIST_INTRO
-	 */
-	public String getRegistIntro() {
-		return this.registIntro;
-	}
-
 
 }

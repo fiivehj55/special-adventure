@@ -1,6 +1,6 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
-import java.util.Set;
 
 /**
  * HOUSE 모델 클래스.
@@ -19,8 +19,8 @@ public class House implements Serializable {
 	/** HOUSE_NAME. */
 	private String houseName;
 
-	/** HOUSE_ADDR. */
-	private String houseAddr;
+	/** HOUSE_ADDRESS. */
+	private String houseAddress;
 
 	/** HOUSE_PRICE. */
 	private Integer housePrice;
@@ -30,27 +30,6 @@ public class House implements Serializable {
 
 	/** HOUSE_INFO. */
 	private String houseInfo;
-	
-	/** REGISTER_DETAIL */
-	private RegisterDetail registerDetail;
-	
-	private Set<RegisterDetail> registerDetailSet;
-	
-	public RegisterDetail getRegisterDetail() {
-		return registerDetail;
-	}
-
-	public void setRegisterDetail(RegisterDetail registerDetail) {
-		this.registerDetail = registerDetail;
-	}
-
-	public Set<RegisterDetail> getRegisterDetailSet() {
-		return registerDetailSet;
-	}
-
-	public void setRegisterDetailSet(Set<RegisterDetail> registerDetailSet) {
-		this.registerDetailSet = registerDetailSet;
-	}
 
 	/**
 	 * 생성자.
@@ -97,22 +76,22 @@ public class House implements Serializable {
 	}
 
 	/**
-	 * HOUSE_ADDR을 설정합니다..
+	 * HOUSE_ADDRESS을 설정합니다..
 	 * 
-	 * @param houseAddr
-	 *            HOUSE_ADDR
+	 * @param houseAddress
+	 *            HOUSE_ADDRESS
 	 */
-	public void setHouseAddr(String houseAddr) {
-		this.houseAddr = houseAddr;
+	public void setHouseAddress(String houseAddress) {
+		this.houseAddress = houseAddress;
 	}
 
 	/**
-	 * HOUSE_ADDR을 가져옵니다..
+	 * HOUSE_ADDRESS을 가져옵니다..
 	 * 
-	 * @return HOUSE_ADDR
+	 * @return HOUSE_ADDRESS
 	 */
-	public String getHouseAddr() {
-		return this.houseAddr;
+	public String getHouseAddress() {
+		return this.houseAddress;
 	}
 
 	/**
@@ -172,5 +151,40 @@ public class House implements Serializable {
 		return this.houseInfo;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((houseNo == null) ? 0 : houseNo.hashCode());
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		House other = (House) obj;
+		if (houseNo == null) {
+			if (other.houseNo != null) {
+				return false;
+			}
+		} else if (!houseNo.equals(other.houseNo)) {
+			return false;
+		}
+		return true;
+	}
 
 }

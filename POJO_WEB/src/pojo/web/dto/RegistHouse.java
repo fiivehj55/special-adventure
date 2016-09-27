@@ -1,7 +1,7 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * REGIST_HOUSE 모델 클래스.
@@ -14,51 +14,14 @@ public class RegistHouse implements Serializable {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
-	/** RH_NO. */
-	private Integer rhNo;
-	
-	/** CHECK_IN */
+	/** RH_ID. */
+	private Integer rhId;
+
+	/** CHECK_IN. */
 	private Date checkIn;
-	
-	/** CHECK_OUT */
+
+	/** CHECK_OUT. */
 	private Date checkOut;
-	
-	/** HOUSE */
-	private House house;
-	
-	private Set<House> houseSet;
-
-	public House getHouse() {
-		return house;
-	}
-
-	public void setHouse(House house) {
-		this.house = house;
-	}
-
-	public Set<House> getHouseSet() {
-		return houseSet;
-	}
-
-	public void setHouseSet(Set<House> houseSet) {
-		this.houseSet = houseSet;
-	}
-
-	public Date getCheckIn() {
-		return checkIn;
-	}
-
-	public void setCheckIn(Date checkIn) {
-		this.checkIn = checkIn;
-	}
-
-	public Date getCheckOut() {
-		return checkOut;
-	}
-
-	public void setCheckOut(Date checkOut) {
-		this.checkOut = checkOut;
-	}
 
 	/**
 	 * 생성자.
@@ -67,23 +30,96 @@ public class RegistHouse implements Serializable {
 	}
 
 	/**
-	 * RH_NO을 설정합니다..
+	 * RH_ID을 설정합니다..
 	 * 
-	 * @param rhNo
-	 *            RH_NO
+	 * @param rhId
+	 *            RH_ID
 	 */
-	public void setRhNo(Integer rhNo) {
-		this.rhNo = rhNo;
+	public void setRhId(Integer rhId) {
+		this.rhId = rhId;
 	}
 
 	/**
-	 * RH_NO을 가져옵니다..
+	 * RH_ID을 가져옵니다..
 	 * 
-	 * @return RH_NO
+	 * @return RH_ID
 	 */
-	public Integer getRhNo() {
-		return this.rhNo;
+	public Integer getRhId() {
+		return this.rhId;
 	}
 
+	/**
+	 * CHECK_IN을 설정합니다..
+	 * 
+	 * @param checkIn
+	 *            CHECK_IN
+	 */
+	public void setCheckIn(Date checkIn) {
+		this.checkIn = checkIn;
+	}
+
+	/**
+	 * CHECK_IN을 가져옵니다..
+	 * 
+	 * @return CHECK_IN
+	 */
+	public Date getCheckIn() {
+		return this.checkIn;
+	}
+
+	/**
+	 * CHECK_OUT을 설정합니다..
+	 * 
+	 * @param checkOut
+	 *            CHECK_OUT
+	 */
+	public void setCheckOut(Date checkOut) {
+		this.checkOut = checkOut;
+	}
+
+	/**
+	 * CHECK_OUT을 가져옵니다..
+	 * 
+	 * @return CHECK_OUT
+	 */
+	public Date getCheckOut() {
+		return this.checkOut;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((rhId == null) ? 0 : rhId.hashCode());
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		RegistHouse other = (RegistHouse) obj;
+		if (rhId == null) {
+			if (other.rhId != null) {
+				return false;
+			}
+		} else if (!rhId.equals(other.rhId)) {
+			return false;
+		}
+		return true;
+	}
 
 }

@@ -1,7 +1,6 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
-import java.sql.Blob;
-import java.util.Set;
 
 /**
  * CUSTOMER_DETAIL 모델 클래스.
@@ -15,40 +14,7 @@ public class CustomerDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** CUS_ID. */
-	private Integer cusId;
-
-	/** CUS_EMAIL. */
-	private String cusEmail;
-
-	/** CUS_GENDER. */
-	private String cusGender;
-
-	/** CUS_IMG. */
-	private Blob cusImg;
-
-	/** CUS_INTRO. */
-	private String cusIntro;
-	
-	/** MEMBER */
-	private Member member;
-	
-	private Set<Member> memberSet;
-	
-	public Set<Member> getMemberSet() {
-		return memberSet;
-	}
-
-	public void setMemberSet(Set<Member> memberSet) {
-		this.memberSet = memberSet;
-	}
-
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
+	private String cusId;
 
 	/**
 	 * 생성자.
@@ -62,7 +28,7 @@ public class CustomerDetail implements Serializable {
 	 * @param cusId
 	 *            CUS_ID
 	 */
-	public void setCusId(Integer cusId) {
+	public void setCusId(String cusId) {
 		this.cusId = cusId;
 	}
 
@@ -71,85 +37,44 @@ public class CustomerDetail implements Serializable {
 	 * 
 	 * @return CUS_ID
 	 */
-	public Integer getCusId() {
+	public String getCusId() {
 		return this.cusId;
 	}
 
 	/**
-	 * CUS_EMAIL을 설정합니다..
-	 * 
-	 * @param cusEmail
-	 *            CUS_EMAIL
+	 * {@inheritDoc}
 	 */
-	public void setCusEmail(String cusEmail) {
-		this.cusEmail = cusEmail;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((cusId == null) ? 0 : cusId.hashCode());
+		return result;
 	}
 
 	/**
-	 * CUS_EMAIL을 가져옵니다..
-	 * 
-	 * @return CUS_EMAIL
+	 * {@inheritDoc}
 	 */
-	public String getCusEmail() {
-		return this.cusEmail;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		CustomerDetail other = (CustomerDetail) obj;
+		if (cusId == null) {
+			if (other.cusId != null) {
+				return false;
+			}
+		} else if (!cusId.equals(other.cusId)) {
+			return false;
+		}
+		return true;
 	}
-
-	/**
-	 * CUS_GENDER을 설정합니다..
-	 * 
-	 * @param cusGender
-	 *            CUS_GENDER
-	 */
-	public void setCusGender(String cusGender) {
-		this.cusGender = cusGender;
-	}
-
-	/**
-	 * CUS_GENDER을 가져옵니다..
-	 * 
-	 * @return CUS_GENDER
-	 */
-	public String getCusGender() {
-		return this.cusGender;
-	}
-
-	/**
-	 * CUS_IMG을 설정합니다..
-	 * 
-	 * @param cusImg
-	 *            CUS_IMG
-	 */
-	public void setCusImg(Blob cusImg) {
-		this.cusImg = cusImg;
-	}
-
-	/**
-	 * CUS_IMG을 가져옵니다..
-	 * 
-	 * @return CUS_IMG
-	 */
-	public Blob getCusImg() {
-		return this.cusImg;
-	}
-
-	/**
-	 * CUS_INTRO을 설정합니다..
-	 * 
-	 * @param cusIntro
-	 *            CUS_INTRO
-	 */
-	public void setCusIntro(String cusIntro) {
-		this.cusIntro = cusIntro;
-	}
-
-	/**
-	 * CUS_INTRO을 가져옵니다..
-	 * 
-	 * @return CUS_INTRO
-	 */
-	public String getCusIntro() {
-		return this.cusIntro;
-	}
-
 
 }

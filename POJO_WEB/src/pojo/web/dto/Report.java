@@ -1,7 +1,7 @@
 package pojo.web.dto;
+
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * REPORT 모델 클래스.
@@ -17,38 +17,17 @@ public class Report implements Serializable {
 	/** REPORT_NO. */
 	private Integer reportNo;
 
-	/** CATEGORY. */
-	private String category;
+	/** REPORT_CATEGORY. */
+	private String reportCategory;
 
-	/** CONTENT. */
-	private String content;
+	/** REPORT_CONTENT. */
+	private String reportContent;
 
-	/** REPORT_CUS_NAME. */
-	private String reportCusName;
+	/** REPORT_CUS_ID. */
+	private String reportCusId;
 
 	/** REGIT_DATE. */
 	private Date regitDate;
-	
-	/** MEMBER */
-	private Member member;
-	
-	private Set<Member> memberSet;
-	
-	public Set<Member> getMemberSet() {
-		return memberSet;
-	}
-
-	public void setMemberSet(Set<Member> memberSet) {
-		this.memberSet = memberSet;
-	}
-
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
 
 	/**
 	 * 생성자.
@@ -76,60 +55,60 @@ public class Report implements Serializable {
 	}
 
 	/**
-	 * CATEGORY을 설정합니다..
+	 * REPORT_CATEGORY을 설정합니다..
 	 * 
-	 * @param category
-	 *            CATEGORY
+	 * @param reportCategory
+	 *            REPORT_CATEGORY
 	 */
-	public void setCategory(String category) {
-		this.category = category;
+	public void setReportCategory(String reportCategory) {
+		this.reportCategory = reportCategory;
 	}
 
 	/**
-	 * CATEGORY을 가져옵니다..
+	 * REPORT_CATEGORY을 가져옵니다..
 	 * 
-	 * @return CATEGORY
+	 * @return REPORT_CATEGORY
 	 */
-	public String getCategory() {
-		return this.category;
+	public String getReportCategory() {
+		return this.reportCategory;
 	}
 
 	/**
-	 * CONTENT을 설정합니다..
+	 * REPORT_CONTENT을 설정합니다..
 	 * 
-	 * @param content
-	 *            CONTENT
+	 * @param reportContent
+	 *            REPORT_CONTENT
 	 */
-	public void setContent(String content) {
-		this.content = content;
+	public void setReportContent(String reportContent) {
+		this.reportContent = reportContent;
 	}
 
 	/**
-	 * CONTENT을 가져옵니다..
+	 * REPORT_CONTENT을 가져옵니다..
 	 * 
-	 * @return CONTENT
+	 * @return REPORT_CONTENT
 	 */
-	public String getContent() {
-		return this.content;
+	public String getReportContent() {
+		return this.reportContent;
 	}
 
 	/**
-	 * REPORT_CUS_NAME을 설정합니다..
+	 * REPORT_CUS_ID을 설정합니다..
 	 * 
-	 * @param reportCusName
-	 *            REPORT_CUS_NAME
+	 * @param reportCusId
+	 *            REPORT_CUS_ID
 	 */
-	public void setReportCusName(String reportCusName) {
-		this.reportCusName = reportCusName;
+	public void setReportCusId(String reportCusId) {
+		this.reportCusId = reportCusId;
 	}
 
 	/**
-	 * REPORT_CUS_NAME을 가져옵니다..
+	 * REPORT_CUS_ID을 가져옵니다..
 	 * 
-	 * @return REPORT_CUS_NAME
+	 * @return REPORT_CUS_ID
 	 */
-	public String getReportCusName() {
-		return this.reportCusName;
+	public String getReportCusId() {
+		return this.reportCusId;
 	}
 
 	/**
@@ -151,5 +130,40 @@ public class Report implements Serializable {
 		return this.regitDate;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((reportNo == null) ? 0 : reportNo.hashCode());
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Report other = (Report) obj;
+		if (reportNo == null) {
+			if (other.reportNo != null) {
+				return false;
+			}
+		} else if (!reportNo.equals(other.reportNo)) {
+			return false;
+		}
+		return true;
+	}
 
 }
