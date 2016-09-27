@@ -1,6 +1,7 @@
 package pojo.web.dto;
 import java.io.Serializable;
 import java.sql.Blob;
+import java.util.Set;
 
 /**
  * REGISTER_DETAIL 모델 클래스.
@@ -30,6 +31,16 @@ public class RegisterDetail implements Serializable {
 	
 	/** MEMBER */
 	private Member member;
+	
+	private Set<Member> memberSet;
+	
+	public Set<Member> getMemberSet() {
+		return memberSet;
+	}
+
+	public void setMemberSet(Set<Member> memberSet) {
+		this.memberSet = memberSet;
+	}
 
 	public Member getMember() {
 		return member;

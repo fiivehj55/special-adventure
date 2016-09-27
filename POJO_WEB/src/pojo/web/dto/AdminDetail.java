@@ -1,5 +1,7 @@
 package pojo.web.dto;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * ADMIN_DETAIL 모델 클래스.
@@ -20,6 +22,16 @@ public class AdminDetail implements Serializable {
 	
 	/** MEMBER */
 	private Member member;
+	
+	private Set<Member> memberSet;
+
+	public Set<Member> getMemberSet() {
+		return memberSet;
+	}
+
+	public void setMemberSet(Set<Member> memberSet) {
+		this.memberSet = memberSet;
+	}
 
 	public Member getMember() {
 		return member;
@@ -33,6 +45,7 @@ public class AdminDetail implements Serializable {
 	 * 생성자.
 	 */
 	public AdminDetail() {
+		this.memberSet = new HashSet<Member>();
 	}
 
 	/**

@@ -29,7 +29,7 @@ public class House implements Serializable {
 
 	/** HOUSE_INFO. */
 	private String houseInfo;
-
+	
 	/**
 	 * 생성자.
 	 */
