@@ -9,7 +9,14 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.example.dto.Employees" alias="employee"/>
+	 	<typeAlias type="pojo.web.dto.AdminDetail" alias="AdminDetail"/>
+	 	<typeAlias type="pojo.web.dto.CustomerDetail" alias="CustomerDetail"/>
+	 	<typeAlias type="pojo.web.dto.House" alias="House"/>
+	 	<typeAlias type="pojo.web.dto.Member" alias="Member"/>
+	 	<typeAlias type="pojo.web.dto.Qeustion" alias="Qeustion"/>
+	 	<typeAlias type="pojo.web.dto.RegisterDetail" alias="RegisterDetail"/>
+	 	<typeAlias type="pojo.web.dto.RegisterHouse" alias="RegisterHouse"/>
+	 	<typeAlias type="pojo.web.dto.Report" alias="Report"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -24,6 +31,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="mappers/EmpMapper.xml"/>
+		<!-- <mapper resource="mappers/EmpMapper.xml"/> -->
 	</mappers>
 </configuration>
