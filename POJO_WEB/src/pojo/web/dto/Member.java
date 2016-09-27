@@ -34,7 +34,7 @@ public class Member implements Serializable {
 
 	/** MEM_IMG. */
 	// Data Type 다시 생각해보기
-	private String memImg;
+	private Blob memImg;
 
 	/** MEM_INTRO. */
 	private String memIntro;
@@ -198,7 +198,7 @@ public class Member implements Serializable {
 	 * @param memImg
 	 *            MEM_IMG
 	 */
-	public void setMemImg(String memImg) {
+	public void setMemImg(Blob memImg) {
 		this.memImg = memImg;
 	}
 
@@ -207,7 +207,7 @@ public class Member implements Serializable {
 	 * 
 	 * @return MEM_IMG
 	 */
-	public String getMemImg() {
+	public Blob getMemImg() {
 		return this.memImg;
 	}
 
