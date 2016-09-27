@@ -1,5 +1,6 @@
 package pojo.web.dto;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * MEMBER 모델 클래스.
@@ -23,6 +24,36 @@ public class Member implements Serializable {
 
 	/** MEM_PASSWORD. */
 	private String memPassword;
+	
+	private Set<AdminDetail> adminDetail;
+	
+	private Set<CustomerDetail> customerDetail;
+	
+	private Set<RegisterDetail> registerDetail;
+
+	public Set<AdminDetail> getAdminDetail() {
+		return adminDetail;
+	}
+
+	public void setAdminDetail(Set<AdminDetail> adminDetail) {
+		this.adminDetail = adminDetail;
+	}
+
+	public Set<CustomerDetail> getCustomerDetail() {
+		return customerDetail;
+	}
+
+	public void setCustomerDetail(Set<CustomerDetail> customerDetail) {
+		this.customerDetail = customerDetail;
+	}
+
+	public Set<RegisterDetail> getRegisterDetail() {
+		return registerDetail;
+	}
+
+	public void setRegisterDetail(Set<RegisterDetail> registerDetail) {
+		this.registerDetail = registerDetail;
+	}
 
 	/**
 	 * 생성자.
