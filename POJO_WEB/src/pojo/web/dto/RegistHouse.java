@@ -1,5 +1,7 @@
 package pojo.web.dto;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.Set;
 
 /**
  * REGIST_HOUSE 모델 클래스.
@@ -14,6 +16,49 @@ public class RegistHouse implements Serializable {
 
 	/** RH_NO. */
 	private Integer rhNo;
+	
+	/** CHECK_IN */
+	private Date checkIn;
+	
+	/** CHECK_OUT */
+	private Date checkOut;
+	
+	/** HOUSE */
+	private House house;
+	
+	private Set<House> houseSet;
+
+	public House getHouse() {
+		return house;
+	}
+
+	public void setHouse(House house) {
+		this.house = house;
+	}
+
+	public Set<House> getHouseSet() {
+		return houseSet;
+	}
+
+	public void setHouseSet(Set<House> houseSet) {
+		this.houseSet = houseSet;
+	}
+
+	public Date getCheckIn() {
+		return checkIn;
+	}
+
+	public void setCheckIn(Date checkIn) {
+		this.checkIn = checkIn;
+	}
+
+	public Date getCheckOut() {
+		return checkOut;
+	}
+
+	public void setCheckOut(Date checkOut) {
+		this.checkOut = checkOut;
+	}
 
 	/**
 	 * 생성자.
