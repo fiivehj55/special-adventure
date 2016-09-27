@@ -17,6 +17,17 @@ public class AdminDetail implements Serializable {
 
 	/** ADMIN_GRADE. */
 	private String adminGrade;
+	
+	/** MEMBER */
+	private Member member;
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
 
 	/**
 	 * 생성자.

@@ -27,6 +27,17 @@ public class CustomerDetail implements Serializable {
 
 	/** CUS_INTRO. */
 	private String cusIntro;
+	
+	/** MEMBER */
+	private Member member;
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
 
 	/**
 	 * 생성자.

@@ -27,6 +27,17 @@ public class RegisterDetail implements Serializable {
 
 	/** REGIST_INTRO. */
 	private String registIntro;
+	
+	/** MEMBER */
+	private Member member;
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
 
 	/**
 	 * 생성자.
