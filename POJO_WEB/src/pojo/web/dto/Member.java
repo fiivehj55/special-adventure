@@ -37,6 +37,39 @@ public class Member implements Serializable {
 
 	/** MEM_INTRO. */
 	private String memIntro;
+	
+	/** CUSTOMER_DETAIL */
+	private CustomerDetail customerDetail;
+	
+	/** REGISTER_DETAIL */
+	private RegisterDetail registerDetail;
+	
+	/** ADMIN_DETAIL */
+	private AdminDetail adminDetail;
+
+	public CustomerDetail getCustomerDetail() {
+		return customerDetail;
+	}
+
+	public void setCustomerDetail(CustomerDetail customerDetail) {
+		this.customerDetail = customerDetail;
+	}
+
+	public RegisterDetail getRegisterDetail() {
+		return registerDetail;
+	}
+
+	public void setRegisterDetail(RegisterDetail registerDetail) {
+		this.registerDetail = registerDetail;
+	}
+
+	public AdminDetail getAdminDetail() {
+		return adminDetail;
+	}
+
+	public void setAdminDetail(AdminDetail adminDetail) {
+		this.adminDetail = adminDetail;
+	}
 
 	/**
 	 * 생성자.

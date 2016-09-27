@@ -1,6 +1,7 @@
 package pojo.web.dto;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * CUSTOMER_DETAIL 모델 클래스.
@@ -15,6 +16,59 @@ public class CustomerDetail implements Serializable {
 
 	/** CUS_ID. */
 	private String cusId;
+	
+	/** QUESTION */
+	private Question question;
+	
+	private Set<Question> questionSet;
+	
+	/** REPORT */
+	private Report report;
+	
+	private Set<Report> reportSet;
+	
+	/** REGIST_HOUSE */
+	private RegistHouse registHouse;
+	
+	public RegistHouse getRegistHouse() {
+		return registHouse;
+	}
+
+	public void setRegistHouse(RegistHouse registHouse) {
+		this.registHouse = registHouse;
+	}
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+	public Set<Question> getQuestionSet() {
+		return questionSet;
+	}
+
+	public void setQuestionSet(Set<Question> questionSet) {
+		this.questionSet = questionSet;
+	}
+
+	public Report getReport() {
+		return report;
+	}
+
+	public void setReport(Report report) {
+		this.report = report;
+	}
+
+	public Set<Report> getReportSet() {
+		return reportSet;
+	}
+
+	public void setReportSet(Set<Report> reportSet) {
+		this.reportSet = reportSet;
+	}
 
 	/**
 	 * 생성자.

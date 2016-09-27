@@ -22,6 +22,17 @@ public class RegistHouse implements Serializable {
 
 	/** CHECK_OUT. */
 	private Date checkOut;
+	
+	/** HOUSE */
+	private House house;
+
+	public House getHouse() {
+		return house;
+	}
+
+	public void setHouse(House house) {
+		this.house = house;
+	}
 
 	/**
 	 * 생성자.

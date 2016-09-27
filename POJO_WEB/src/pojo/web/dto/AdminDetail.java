@@ -15,6 +15,28 @@ public class AdminDetail implements Serializable {
 
 	/** ADMIN_ID. */
 	private String adminId;
+	
+	/** REPORT */
+	private Report report;
+	
+	/** QUESTION */
+	private Question question;
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+	public Report getReport() {
+		return report;
+	}
+
+	public void setReport(Report report) {
+		this.report = report;
+	}
 
 	/**
 	 * 생성자.
