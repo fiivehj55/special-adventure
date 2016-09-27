@@ -27,6 +27,8 @@ public class Report implements Serializable {
 
 	/** REGIT_DATE. */
 	private Date regitDate;
+	
+	/**  */
 
 	/**
 	 * 생성자.

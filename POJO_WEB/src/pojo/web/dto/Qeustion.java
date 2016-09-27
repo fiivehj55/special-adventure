@@ -1,6 +1,7 @@
 package pojo.web.dto;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * QEUSTION 모델 클래스.
@@ -24,6 +25,27 @@ public class Qeustion implements Serializable {
 
 	/** QUEST_DATE. */
 	private Date questDate;
+	
+	/** MEMBER */
+	private Member member;
+	
+	private Set<Member> memberSet;
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
+
+	public Set<Member> getMemberSet() {
+		return memberSet;
+	}
+
+	public void setMemberSet(Set<Member> memberSet) {
+		this.memberSet = memberSet;
+	}
 
 	/**
 	 * 생성자.

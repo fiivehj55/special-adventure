@@ -1,5 +1,6 @@
 package pojo.web.dto;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * HOUSE 모델 클래스.
@@ -30,6 +31,27 @@ public class House implements Serializable {
 	/** HOUSE_INFO. */
 	private String houseInfo;
 	
+	/** REGISTER_DETAIL */
+	private RegisterDetail registerDetail;
+	
+	private Set<RegisterDetail> registerDetailSet;
+	
+	public RegisterDetail getRegisterDetail() {
+		return registerDetail;
+	}
+
+	public void setRegisterDetail(RegisterDetail registerDetail) {
+		this.registerDetail = registerDetail;
+	}
+
+	public Set<RegisterDetail> getRegisterDetailSet() {
+		return registerDetailSet;
+	}
+
+	public void setRegisterDetailSet(Set<RegisterDetail> registerDetailSet) {
+		this.registerDetailSet = registerDetailSet;
+	}
+
 	/**
 	 * 생성자.
 	 */
