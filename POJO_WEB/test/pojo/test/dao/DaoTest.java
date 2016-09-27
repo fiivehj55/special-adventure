@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import pojo.web.dao.MemberDao;
 import pojo.web.dao.MemberDaoImpl;
 import pojo.web.dto.Member;
 import pojo.web.util.DBUtil;
@@ -17,7 +18,7 @@ public class DaoTest {
 	
 	static Logger logger = LoggerFactory.getLogger(DaoTest.class);
 	
-	MemberDaoImpl dao = MemberDaoImpl.getInstance();
+	MemberDao dao = MemberDaoImpl.getInstance();
 
 	@Test
 	public void testTemplate() {

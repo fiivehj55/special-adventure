@@ -21,7 +21,7 @@ public class MemberDaoImpl implements MemberDao {
 		return instance;
 	}
 	
-	private final String MEMBER_MAP = "hr.dao.memberMapper.";
+	private final String MEMBER_MAP = "pojo.web.dao.memberMapper.";
 	
 	@Override
 	public List<Member> selectAllMember(SqlSession session) {

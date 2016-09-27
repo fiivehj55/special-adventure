@@ -9,14 +9,14 @@
 	</settings>
 	
 	<typeAliases>
-	 	<typeAlias type="pojo.web.dto.AdminDetail" alias="AdminDetail"/>
-	 	<typeAlias type="pojo.web.dto.CustomerDetail" alias="CustomerDetail"/>
-	 	<typeAlias type="pojo.web.dto.House" alias="House"/>
-	 	<typeAlias type="pojo.web.dto.Member" alias="Member"/>
-	 	<typeAlias type="pojo.web.dto.Qeustion" alias="Qeustion"/>
-	 	<typeAlias type="pojo.web.dto.RegisterDetail" alias="RegisterDetail"/>
-	 	<typeAlias type="pojo.web.dto.RegisterHouse" alias="RegisterHouse"/>
-	 	<typeAlias type="pojo.web.dto.Report" alias="Report"/>
+	 	<typeAlias type="pojo.web.dto.AdminDetail" alias="adminDetail"/>
+	 	<typeAlias type="pojo.web.dto.CustomerDetail" alias="customerDetail"/>
+	 	<typeAlias type="pojo.web.dto.House" alias="house"/>
+	 	<typeAlias type="pojo.web.dto.Member" alias="member"/>
+	 	<typeAlias type="pojo.web.dto.Question" alias="question"/>
+	 	<typeAlias type="pojo.web.dto.RegisterDetail" alias="registerDetail"/>
+	 	<typeAlias type="pojo.web.dto.RegistHouse" alias="registHouse"/>
+	 	<typeAlias type="pojo.web.dto.Report" alias="report"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -31,6 +31,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<!-- <mapper resource="mappers/EmpMapper.xml"/> -->
+		<mapper resource="mapper/memberMapper.xml"/>
 	</mappers>
 </configuration>
