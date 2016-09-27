@@ -1,6 +1,7 @@
 package pojo.web.dto;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * REPORT 모델 클래스.
@@ -28,7 +29,26 @@ public class Report implements Serializable {
 	/** REGIT_DATE. */
 	private Date regitDate;
 	
-	/**  */
+	/** MEMBER */
+	private Member member;
+	
+	private Set<Member> memberSet;
+	
+	public Set<Member> getMemberSet() {
+		return memberSet;
+	}
+
+	public void setMemberSet(Set<Member> memberSet) {
+		this.memberSet = memberSet;
+	}
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
 
 	/**
 	 * 생성자.
