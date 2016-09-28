@@ -29,7 +29,7 @@ public class DaoTest {
 	public void testSelectAllMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			List<Member> member = dao.selectAllMember(session);
-			logger.trace("List: {]", member);
+			logger.trace("List: {}", member);
 		}
 	}
 

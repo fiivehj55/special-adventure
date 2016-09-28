@@ -72,6 +72,14 @@ public class Member implements Serializable {
 		this.adminDetail = adminDetail;
 	}
 
+	@Override
+	public String toString() {
+		return "Member [memId=" + memId + ", memName=" + memName + ", memPassword=" + memPassword + ", memPhone="
+				+ memPhone + ", memEmail=" + memEmail + ", memGender=" + memGender + ", memImg=" + memImg
+				+ ", memIntro=" + memIntro + ", customerDetail=" + customerDetail + ", registerDetail=" + registerDetail
+				+ ", adminDetail=" + adminDetail + "]";
+	}
+
 	/**
 	 * 생성자.
 	 */
