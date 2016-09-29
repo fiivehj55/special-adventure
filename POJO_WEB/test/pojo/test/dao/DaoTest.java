@@ -107,13 +107,14 @@ public class DaoTest {
 	         logger.trace("List: {}", house);
 	      }
 	   }
-	   @Test
-	   public void testDeleteHouse() {
-	      try(SqlSession session = DBUtil.getInstance().getSession()){
-	         House house = new House(2, "대전빌라", "대전시 유성구 장대동", 400000, 7, "hello");
-	         int result = hdao.deleteHouse(session, 1);
-	         logger.trace("List: {}", house);
-	      }
+	   
+	@Test
+	public void testDeleteHouse() {
+	   try(SqlSession session = DBUtil.getInstance().getSession()){
+	      House house = new House(2, "대전빌라", "대전시 유성구 장대동", 400000, 7, "hello");
+	      int result = hdao.deleteHouse(session, 1);
+	      logger.trace("List: {}", house);
 	   }
+	}
 	
 }
