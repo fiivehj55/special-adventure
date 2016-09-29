@@ -49,7 +49,7 @@ public class DaoTest {
 	@Test
 	public void testInsertMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Member member = new Member("yang", "양희준", "1423", "01029051216", "yang@naver.com", "male", "안녕하세요");
+			Member member = new Member("yang", "양희준", "1423", "01029051216", "yang@naver.com", "male", "/index.jsp/img", "안녕하세요");
 			int result = mdao.insertMember(session, member);
 			logger.trace("List: {}", member);
 		}
@@ -58,7 +58,7 @@ public class DaoTest {
 	@Test
 	public void testUpdateMeber() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "안녕하세요!!");
+			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "/index.jsp/img","안녕하세요!!");
 			int result = mdao.insertMember(session, member);
 			logger.trace("List: {}", member);
 		}

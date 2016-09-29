@@ -79,7 +79,7 @@ public class Member implements Serializable {
 	}
 	
 	public Member(String memId, String memName, String memPassword, 
-			String memPhone, String memEmail, String memGender,String memIntro) {
+			String memPhone, String memEmail, String memGender, String memImg, String memIntro) {
 		super();
 		this.memId = memId;
 		this.memName = memName;
@@ -87,6 +87,7 @@ public class Member implements Serializable {
 		this.memPhone = memPhone;
 		this.memEmail = memEmail;
 		this.memGender = memGender;
+		this.memImg = memImg;
 		this.memIntro = memIntro;
 	}
 

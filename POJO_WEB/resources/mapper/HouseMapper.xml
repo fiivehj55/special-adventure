@@ -2,32 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pojo.web.dao.houseMapper">
 
-    <select id="selectAllHouse" resultMap="houseBase">
-   select * from house
-   </select>
-   <select id="selectByIdHouse" parameterType="int" resultMap="houseBase">
-   select * from house where house_no = #{num}
-   </select>
-   
-    <insert id="insertHouse" parameterType="house">
-   insert into house values(#{houseNo},#{houseName},
-   #{houseAddress},#{housePrice},#{houseScore},#{houseInfo})
-   </insert>
-   <update id="updateHouse" parameterType="house">
-   update  house 
-   set house_name=#{houseName},house_address=#{houseAddress},house_price=#{housePrice}
-   where house_no=#{houseNo}
-   </update>
-   <delete id="deleteHouse" parameterType="int">
-   delete house where house_no = #{num}
-   </delete>
-   
-   <resultMap type="house" id="houseBase">
-      <id column="house_no" property="houseNo"/>
-      <result column="house_name" property="houseName"/>
-      <result column="house_address" property="houseAddress"/>
-      <result column="house_price" property="housePrice"/>
-      <result column="house_score" property="houseScore"/>
-      <result column="house_info" property="houseInfo"/>
-   </resultMap> 
+	<select id="selectAllHouse" resultMap="houseBase">
+		select * from house
+	</select>
+	
+	<select id="selectByIdHouse" parameterType="int" resultMap="houseBase">
+		select * from house where house_no = #{num}
+	</select>
+
+	<insert id="insertHouse" parameterType="house">
+		insert into house values(#{houseNo},#{houseName},
+		#{houseAddress},#{housePrice},#{houseScore},#{houseInfo})
+	</insert>
+	
+	<update id="updateHouse" parameterType="house">
+		update house set
+		house_name=#{houseName},house_address=#{houseAddress},house_price=#{housePrice}
+		where house_no=#{houseNo}
+	</update>
+	
+	<delete id="deleteHouse" parameterType="int">
+		delete house where house_no = #{num}
+	</delete>
+
+	<resultMap type="house" id="houseBase">
+		<id column="house_no" property="houseNo" />
+		<result column="house_name" property="houseName" />
+		<result column="house_address" property="houseAddress" />
+		<result column="house_price" property="housePrice" />
+		<result column="house_score" property="houseScore" />
+		<result column="house_info" property="houseInfo" />
+	</resultMap>
 </mapper>
