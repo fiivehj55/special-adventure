@@ -52,4 +52,5 @@ public class MemberDaoImpl implements MemberDao {
 		String stmt = MEMBER_MAP + "deleteMember";
 		return session.update(stmt, memId);
 	}
+	
 }

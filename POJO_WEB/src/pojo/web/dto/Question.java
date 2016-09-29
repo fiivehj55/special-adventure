@@ -143,11 +143,14 @@ public class Question implements Serializable {
 		}
 		return true;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "Question [questNo=" + questNo + ", questTitle=" + questTitle + ", questContent=" + questContent
 				+ ", questDate=" + questDate + "]";
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 
 }

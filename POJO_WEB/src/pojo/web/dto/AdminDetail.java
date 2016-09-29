@@ -9,6 +9,7 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class AdminDetail implements Serializable {
+<<<<<<< HEAD
 	
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
@@ -102,6 +103,96 @@ public class AdminDetail implements Serializable {
 	@Override
 	public String toString() {
 		return "AdminDetail [adminId=" + adminId + ", report=" + report + ", question=" + question + "]";
+=======
+
+	/** serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+
+	/** ADMIN_ID. */
+	private String adminId;
+	
+	/** REPORT */
+	private Report report;
+	
+	/** QUESTION */
+	private Question question;
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+	public Report getReport() {
+		return report;
+	}
+
+	public void setReport(Report report) {
+		this.report = report;
+	}
+
+	/**
+	 * 생성자.
+	 */
+	public AdminDetail() {
+	}
+
+	/**
+	 * ADMIN_ID을 설정합니다..
+	 * 
+	 * @param adminId
+	 *            ADMIN_ID
+	 */
+	public void setAdminId(String adminId) {
+		this.adminId = adminId;
+	}
+
+	/**
+	 * ADMIN_ID을 가져옵니다..
+	 * 
+	 * @return ADMIN_ID
+	 */
+	public String getAdminId() {
+		return this.adminId;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((adminId == null) ? 0 : adminId.hashCode());
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		AdminDetail other = (AdminDetail) obj;
+		if (adminId == null) {
+			if (other.adminId != null) {
+				return false;
+			}
+		} else if (!adminId.equals(other.adminId)) {
+			return false;
+		}
+		return true;
+>>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 	}
 
 }

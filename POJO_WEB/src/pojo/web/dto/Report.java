@@ -165,11 +165,14 @@ public class Report implements Serializable {
 		}
 		return true;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "Report [reportNo=" + reportNo + ", reportCategory=" + reportCategory + ", reportContent="
 				+ reportContent + ", reportCusId=" + reportCusId + ", regitDate=" + regitDate + "]";
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 
 }

@@ -76,10 +76,13 @@ public class RegisterDetail implements Serializable {
 		}
 		return true;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "RegisterDetail [registId=" + registId + "]";
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 
 }
