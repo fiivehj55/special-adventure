@@ -130,14 +130,11 @@ public class CustomerDetail implements Serializable {
 		}
 		return true;
 	}
-<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "CustomerDetail [cusId=" + cusId + ", question=" + question + ", questionSet=" + questionSet
 				+ ", report=" + report + ", reportSet=" + reportSet + ", registHouse=" + registHouse + "]";
 	}
-=======
->>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 
 }

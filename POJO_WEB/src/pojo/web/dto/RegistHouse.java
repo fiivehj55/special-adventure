@@ -132,14 +132,11 @@ public class RegistHouse implements Serializable {
 		}
 		return true;
 	}
-<<<<<<< HEAD
 	
 	@Override
 	public String toString() {
 		return "RegistHouse [rhId=" + rhId + ", checkIn=" + checkIn + ", checkOut=" + checkOut + ", house=" + house
 				+ "]";
 	}
-=======
->>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 
 }
