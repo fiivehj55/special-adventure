@@ -10,6 +10,7 @@ import pojo.web.dto.House;
 import pojo.web.dto.Member;
 
 public class HouseDaoImpl implements HouseDao {
+	// 하우스 IMPL
 
 	static Logger logger = LoggerFactory.getLogger(HouseDaoImpl.class);
 

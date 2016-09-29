@@ -8,6 +8,8 @@ import pojo.web.dto.House;
 import pojo.web.dto.Member;
 
 public interface HouseDao {
+	// 하우스 DAO
+	
 	List<House> selectAllHouse(SqlSession session);
 	
 	House selectByIdHouse(SqlSession session, int houseNo);
