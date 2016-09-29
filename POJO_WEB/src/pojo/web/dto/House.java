@@ -30,6 +30,17 @@ public class House implements Serializable {
 
 	/** HOUSE_INFO. */
 	private String houseInfo;
+	
+	/** REGIST_HOUSE */
+	private RegistHouse registHouse;
+
+	public RegistHouse getRegistHouse() {
+		return registHouse;
+	}
+
+	public void setRegistHouse(RegistHouse registHouse) {
+		this.registHouse = registHouse;
+	}
 
 	/**
 	 * 생성자.
