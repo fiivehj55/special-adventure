@@ -32,5 +32,11 @@
 	</environments>
 	<mappers>
 		<mapper resource="mapper/memberMapper.xml"/>
+		<mapper resource="mapper/AdminDetail.xml"/>
+		<mapper resource="mapper/CustomerDetail.xml"/>
+		<mapper resource="mapper/HouseMapper.xml"/>
+		<mapper resource="mapper/RegisterDetail.xml"/>
+		<mapper resource="mapper/RegistHouseMapper.xml"/>
+		<mapper resource="mapper/ReportMapper.xml"/>
 	</mappers>
 </configuration>
