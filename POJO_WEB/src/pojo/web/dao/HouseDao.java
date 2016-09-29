@@ -17,5 +17,4 @@ public interface HouseDao {
 	int updateHouse(SqlSession session, House house);
 	
 	int deleteHouse(SqlSession session, int houseNo);
-	
 }
