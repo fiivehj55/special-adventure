@@ -8,7 +8,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.sql.Date;
 
 import pojo.web.dao.HouseDao;
 import pojo.web.dao.HouseDaoImpl;
@@ -139,6 +138,7 @@ public class DaoTest {
 		}
 	}
 	
+	// date type 넣는 Query 생각하기
 	@Test
 	public void testInsertRegistHouse() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
@@ -148,6 +148,7 @@ public class DaoTest {
 		}
 	}
 	
+	// date type 넣는 Query 생각하기
 	@Test
 	public void testUpdateRegistHouse() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){

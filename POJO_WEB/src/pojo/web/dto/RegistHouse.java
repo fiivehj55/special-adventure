@@ -1,7 +1,7 @@
 package pojo.web.dto;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * REGIST_HOUSE 모델 클래스.
