@@ -8,13 +8,17 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.sql.Date;
 
 import pojo.web.dao.HouseDao;
 import pojo.web.dao.HouseDaoImpl;
 import pojo.web.dao.MemberDao;
 import pojo.web.dao.MemberDaoImpl;
+import pojo.web.dao.RegistHouseDao;
+import pojo.web.dao.RegistHouseDaoImpl;
 import pojo.web.dto.House;
 import pojo.web.dto.Member;
+import pojo.web.dto.RegistHouse;
 import pojo.web.util.DBUtil;
 
 public class DaoTest {
@@ -23,6 +27,7 @@ public class DaoTest {
 	
 	MemberDao mdao = MemberDaoImpl.getInstance();
 	HouseDao hdao = HouseDaoImpl.getInstance();
+	RegistHouseDao rhdao = RegistHouseDaoImpl.getInstance();
 
 	/** MEMBER TEST */
 	@Test
@@ -58,7 +63,7 @@ public class DaoTest {
 	@Test
 	public void testUpdateMeber() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "/index.jsp/img","안녕하세요!!");
+			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "/index.jsp/img", "안녕하세요!!");
 			int result = mdao.insertMember(session, member);
 			logger.trace("List: {}", member);
 		}
@@ -115,6 +120,50 @@ public class DaoTest {
 	      int result = hdao.deleteHouse(session, 1);
 	      logger.trace("List: {}", house);
 	   }
+	}
+	
+	/** REGIST_HOUSE */
+	@Test
+	public void testSelectAllRegistHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<RegistHouse> rhouse = rhdao.selectAllRegistHouse(session);
+			logger.trace("List: {}", rhouse);
+		}
+	}
+	
+	@Test
+	public void testSelectByIdRegistHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			RegistHouse rhouse = rhdao.selectByIdRegistHouse(session, 1);
+			logger.trace("List: {}", rhouse);
+		}
+	}
+	
+	@Test
+	public void testInsertRegistHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			RegistHouse rhouse = new RegistHouse(2, null, null);
+			int result = rhdao.insertRegistHouse(session, rhouse);
+			logger.trace("List: {}", rhouse);
+		}
+	}
+	
+	@Test
+	public void testUpdateRegistHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			RegistHouse rHouse = new RegistHouse(2, null, null);
+			int result = rhdao.updateRegistHouse(session, rHouse);
+			logger.trace("List: {}", rHouse);
+		}
+	}
+	
+	@Test
+	public void testDeleteRegistHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			int result = rhdao.deleteRegistHouse(session, 1);
+			rhdao.deleteRegistHouse(session, 1);
+			logger.trace("List: {}", result);
+		}
 	}
 	
 }
