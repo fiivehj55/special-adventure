@@ -22,5 +22,4 @@ public class MemberServiceImp implements MemberService{
 		else
 			return null;
 	}
-
 }
