@@ -10,6 +10,16 @@ import pojo.web.util.DBUtil;
 public class MemberServiceImp implements MemberService{
 	MemberDao dao = MemberDaoImpl.getInstance();
 	
+	//singleton 처리
+	private MemberServiceImp() {
+	}
+
+	private static MemberServiceImp instance = new MemberServiceImp();
+
+	public static MemberServiceImp getInstance() {
+		return instance;
+	}
+	
 	@Override
 	public Member login(String id, String password) {
 		Member user = null;

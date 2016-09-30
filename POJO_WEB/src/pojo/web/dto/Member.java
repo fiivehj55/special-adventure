@@ -39,13 +39,16 @@ public class Member implements Serializable {
 	/** MEM_INTRO. */
 	private String memIntro;
 	
-	/** CUSTOMER_DETAIL */
+	/** MEMBER_DETAIL */
+	private MemberDetail mDetail;
+	
+	/** CUSTOMER_DETAIL *//*
 	private CustomerDetail customerDetail;
 	
-	/** REGISTER_DETAIL */
+	*//** REGISTER_DETAIL *//*
 	private RegisterDetail registerDetail;
 	
-	/** ADMIN_DETAIL */
+	*//** ADMIN_DETAIL *//*
 	private AdminDetail adminDetail;
 
 	public CustomerDetail getCustomerDetail() {
@@ -70,6 +73,14 @@ public class Member implements Serializable {
 
 	public void setAdminDetail(AdminDetail adminDetail) {
 		this.adminDetail = adminDetail;
+	}*/
+
+	public MemberDetail getmDetail() {
+		return mDetail;
+	}
+
+	public void setmDetail(MemberDetail mDetail) {
+		this.mDetail = mDetail;
 	}
 
 	/**
@@ -278,13 +289,20 @@ public class Member implements Serializable {
 		}
 		return true;
 	}
-	
+
 	@Override
+	public String toString() {
+		return "Member [memId=" + memId + ", memName=" + memName + ", memPassword=" + memPassword + ", memPhone="
+				+ memPhone + ", memEmail=" + memEmail + ", memGender=" + memGender + ", memImg=" + memImg
+				+ ", memIntro=" + memIntro + ", mDetail=" + mDetail + "]";
+	}
+	
+	/*@Override
 	public String toString() {
 		return "Member [memId=" + memId + ", memName=" + memName + ", memPassword=" + memPassword + ", memPhone="
 				+ memPhone + ", memEmail=" + memEmail + ", memGender=" + memGender + ", memImg=" + memImg
 				+ ", memIntro=" + memIntro + ", customerDetail=" + customerDetail + ", registerDetail=" + registerDetail
 				+ ", adminDetail=" + adminDetail + "]";
-	}
+	}*/
 
 }
