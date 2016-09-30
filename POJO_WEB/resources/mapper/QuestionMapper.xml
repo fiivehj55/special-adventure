@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pojo.web.dao.QuestionMapper">
+	<select id ="selectAllQuestion" resultMap="">
+	</select>
+	<resultMap id="Question" type="question">
+	<id column="quest"/>
+	</resultMap>
+<!-- 	List<Question> selectAllQuestion(SqlSession session);
+	
+	Question selectByQuestNo(SqlSession session, int questNo);
+	
+	int insertQuestion(SqlSession session, Question question);
+	
+	int updateQuestion(SqlSession session, Question question);
+	
+	int deleteQuestion(SqlSession session, int questNo);
+	
+	
+	private Integer questNo;
 
+	/** QUEST_TITLE. */
+	private String questTitle;
+
+	/** QUEST_CONTENT. */
+	private String questContent;
+
+	/** QUEST_DATE. */
+	private Date questDate;
+	
+	private Member member;
+	
+	private Member admin;
+	 -->
 </mapper>

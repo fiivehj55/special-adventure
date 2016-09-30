@@ -32,4 +32,19 @@ public class MemberServiceImp implements MemberService{
 		else
 			return null;
 	}
+	@Override
+	public int delete(String id, String password) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int join(Member member) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int update(Member member, String id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
