@@ -22,16 +22,6 @@ public class MemberDetailDaoImpl implements MemberDetailDao {
 	}
 	
 	private final String MEMBER_DETAIL_MAP = "pojo.web.dao.MemberDetailMapper.";
-
-	//singleton 처리
-	private MemberDetailDaoImpl() {
-	}
-
-	private static MemberDetailDaoImpl instance = new MemberDetailDaoImpl();
-
-	public static MemberDetailDaoImpl getInstance() {
-		return instance;
-	}
 	
 	@Override
 	public List<MemberDetail> selectAllMemberDetail(SqlSession session) {
