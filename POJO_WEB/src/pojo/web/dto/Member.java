@@ -39,8 +39,14 @@ public class Member implements Serializable {
 	/** MEM_INTRO. */
 	private String memIntro;
 	
-	/** MEMBER_DETAIL */
-	private MemberDetail mDetail;
+	/** DETAIL_ID */
+	private Integer detailId;
+	
+	/** DETAIL_GRADE */
+	private String detailGrade;
+	
+	/** MEMBER_DETAIL *//*
+	private MemberDetail mDetail;*/
 	
 	/** CUSTOMER_DETAIL *//*
 	private CustomerDetail customerDetail;
@@ -75,12 +81,28 @@ public class Member implements Serializable {
 		this.adminDetail = adminDetail;
 	}*/
 
-	public MemberDetail getmDetail() {
+	/*public MemberDetail getmDetail() {
 		return mDetail;
 	}
 
 	public void setmDetail(MemberDetail mDetail) {
 		this.mDetail = mDetail;
+	}*/
+
+	public Integer getDetailId() {
+		return detailId;
+	}
+
+	public void setDetailId(Integer detailId) {
+		this.detailId = detailId;
+	}
+
+	public String getDetailGrade() {
+		return detailGrade;
+	}
+
+	public void setDetailGrade(String detailGrade) {
+		this.detailGrade = detailGrade;
 	}
 
 	/**
@@ -294,9 +316,9 @@ public class Member implements Serializable {
 	public String toString() {
 		return "Member [memId=" + memId + ", memName=" + memName + ", memPassword=" + memPassword + ", memPhone="
 				+ memPhone + ", memEmail=" + memEmail + ", memGender=" + memGender + ", memImg=" + memImg
-				+ ", memIntro=" + memIntro + ", mDetail=" + mDetail + "]";
+				+ ", memIntro=" + memIntro + ", detailId=" + detailId + ", detailGrade=" + detailGrade + "]";
 	}
-	
+
 	/*@Override
 	public String toString() {
 		return "Member [memId=" + memId + ", memName=" + memName + ", memPassword=" + memPassword + ", memPhone="
