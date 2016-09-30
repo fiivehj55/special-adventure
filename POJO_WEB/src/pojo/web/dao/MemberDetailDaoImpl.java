@@ -8,6 +8,16 @@ import pojo.web.dto.MemberDetail;
 
 public class MemberDetailDaoImpl implements MemberDetailDao {
 
+	//singleton 처리
+	private MemberDetailDaoImpl() {
+	}
+
+	private static MemberDetailDaoImpl instance = new MemberDetailDaoImpl();
+
+	public static MemberDetailDaoImpl getInstance() {
+		return instance;
+	}
+	
 	@Override
 	public List<MemberDetail> selectAllMemberDetail(SqlSession session) {
 		// TODO Auto-generated method stub

@@ -25,6 +25,27 @@ public class Question implements Serializable {
 
 	/** QUEST_DATE. */
 	private Date questDate;
+	
+
+
+	private Member member;
+	
+	private Member admin;
+	
+	public Member getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Member admin) {
+		this.admin = admin;
+	}
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
 
 	/**
 	 * 생성자.
