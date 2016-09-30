@@ -26,14 +26,14 @@
 <h1>회원가입</h1>
 <form >
 <p><label for="id">아이디:</label>
-	<input type="text" name="id" id="id" placeholder="영문+숫자 조합 8 이상 입력하세요">
+	<input type="text" name="id" id="id" placeholder="영문+숫자 조합 8 이상">
 	<input type="button" value="중복확인"></p>
 	
 <p><label for="pass">비밀번호:</label>
 	<input type="password" name="password" id="pass" 
-			placeholder="영문+숫자 조합 8 이상 입력하세요">
+			placeholder="영문+숫자 조합 8 이상">
 <p><label for="passok"></label>
-	<input type="password" name="password" placeholder="영문+숫자 조합 8 이상 입력하세요">
+	<input type="password" name="password" placeholder="영문+숫자 조합 8 이상">
 
 <p><label for="name">이름:</label>
 	<input type="text" name="name" id="name"></p>

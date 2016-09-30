@@ -63,8 +63,6 @@ input, input[placeholder] {
 					value="확인">
 			</header>
 			<p>지금 <a href="http://templated.co"> 인기있는 </a>숙소를 만나보세요!
-
-			<hr/>
 	</div>
 		</div>
 
@@ -77,18 +75,10 @@ input, input[placeholder] {
 					<section class="6u">
 						<a href="#" class="image full"><img
 							src="css/images/image1.jpg" width=500 height=500 alt=""></a>
-						<header>
-							<!-- <h2>Mauris vulputate dolor</h2> -->
-						</header>
-						<!-- <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p> -->
 					</section>
 					<section class="6u">
 						<a href="#" class="image full"><img
 							src="css/images/image2.jpg" width=500 height=500 alt=""></a>
-						<header>
-							<!-- <h2>Mauris vulputate dolor</h2> -->
-						</header>
-						<!-- <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</p> -->
 					</section>
 				</div>
 
