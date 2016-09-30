@@ -12,7 +12,7 @@
     
     <insert id="insertRegistHouse" parameterType="registHouse">
         insert into REGIST_HOUSE
-        values (#{rhId}, sysdate, sysdate)
+        values (#{rhId}, #{checkIn}, #{checkOut})
     </insert>
     
     <update id="updateRegistHouse" parameterType="registHouse">

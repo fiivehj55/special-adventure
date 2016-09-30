@@ -2,6 +2,8 @@ package pojo.test.dao;
 
 import static org.junit.Assert.fail;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -141,8 +143,10 @@ public class DaoTest {
 	// date type 넣는 Query 생각하기
 	@Test
 	public void testInsertRegistHouse() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			RegistHouse rhouse = new RegistHouse(2, null, null);
+			RegistHouse rhouse = new RegistHouse(2, dd, dd);
 			int result = rhdao.insertRegistHouse(session, rhouse);
 			logger.trace("List: {}", rhouse);
 		}
