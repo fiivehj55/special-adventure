@@ -98,10 +98,5 @@ public class MemberDetail implements Serializable {
 		}
 		return true;
 	}
-	
-	@Override
-	public String toString() {
-		return "MemberDetail [detailId=" + detailId + ", detailGrade=" + detailGrade + "]";
-	}
 
 }

@@ -62,9 +62,9 @@ public class DaoTest {
 	}
 	
 	@Test
-	public void testUpdateMeber() {
+	public void testUpdateMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "/index.jsp/img", "안녕하세요!!");
+			Member member = new Member("yang", "양희준", "1425", "01029051217", "yang1@naver.com", "male", "/index.jsp/img", "안녕하세요!!", 2, "회원");
 			int result = mdao.insertMember(session, member);
 			logger.trace("List: {}", member);
 		}

@@ -34,6 +34,6 @@
 		<mapper resource="mapper/HouseMapper.xml"/>
 		<mapper resource="mapper/RegistHouseMapper.xml"/>
 		<mapper resource="mapper/ReportMapper.xml"/>
-		<mapper resource="mapper/QuestionMapper.xml"/>
+		<!-- <mapper resource="mapper/QuestionMapper.xml"/> -->
 	</mappers>
 </configuration>
