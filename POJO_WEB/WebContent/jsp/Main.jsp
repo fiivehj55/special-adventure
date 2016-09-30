@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<jsp:include page="/jsp/Header.jsp"></jsp:include>
 <h1>사랑방손님</h1>
 <input id="text_box" type="text" placeholder="두정동 또는 건물이름을 검색하세요">
 
