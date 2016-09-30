@@ -13,7 +13,6 @@
 <h3>지금 인기있는 숙소를 만나보세요!</h3>
 <table border=1 width=500 height=200>
 <tr><td width= 250>사진</td><td width= 250>사진</td>
-
 <tr><td>사진</td><td>사진</td>
 </table>
 
