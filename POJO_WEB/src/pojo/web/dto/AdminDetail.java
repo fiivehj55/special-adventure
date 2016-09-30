@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class AdminDetail implements Serializable {
-	
+	 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
