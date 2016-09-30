@@ -38,7 +38,7 @@ input, input[placeholder] {
 					<li class="active"><a href="index.html">호스팅하기</a></li>
 					<li><a href="left-sidebar.html">메시지</a></li>
 					<li><a href="right-sidebar.html">고객센터</a></li>
-					<li><a href="no-sidebar.html">로그인</a></li>
+					<li><a href="jsp/Header.jsp">로그인</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -62,8 +62,7 @@ input, input[placeholder] {
 					placeholder="두정동 또는 건물이름을 입력하세요"> <input type="button"
 					value="확인">
 			</header>
-			<p>
-				지금 <a href="http://templated.co"> 인기있는 </a>숙소를 만나보세요!
+			<p>지금 <a href="http://templated.co"> 인기있는 </a>숙소를 만나보세요!
 
 			<hr/>
 	</div>
@@ -71,7 +70,7 @@ input, input[placeholder] {
 
 		<!-- Main -->
 		<div id="main">
-			<!--ë©ì¸ì 2X2 ì¬ì§ê³¼ ì ëª©ê³¼ ë´ì©   -->
+			
 			<div id="content" class="container">
 
 				<div class="row">
