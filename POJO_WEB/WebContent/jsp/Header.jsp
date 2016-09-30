@@ -28,7 +28,12 @@
 	<input type="text" id = "id" name= "id"></p>
 	<label>PASS: </label>
 	<input type="password" id = "password" name= "password">
-	<p><input type="submit" value="로그인">
+	
+	<p>
+<a href="<%=request.getContextPath()%>/jsp/FindId.jsp"><input type="button" value="아이디 찾기" >
+<a href="<%=request.getContextPath()%>/jsp/FindPass.jsp">	<input type="button" value="비밀번호 찾기">
+	
+	<input type="submit" value="로그인">
 	<a href="<%=request.getContextPath()%>/jsp/Join.jsp"><input type="button" value="회원가입">
 	</a>
 	</form>
