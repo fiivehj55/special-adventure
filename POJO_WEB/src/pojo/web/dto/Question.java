@@ -26,8 +26,6 @@ public class Question implements Serializable {
 	/** QUEST_DATE. */
 	private Date questDate;
 	
-
-
 	private Member member;
 	
 	private Member admin;
