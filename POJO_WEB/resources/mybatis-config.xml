@@ -15,6 +15,7 @@
 	 	<typeAlias type="pojo.web.dto.RegistHouse" alias="registHouse"/>
 	 	<typeAlias type="pojo.web.dto.Report" alias="report"/>
 	 	<typeAlias type="pojo.web.dto.Question" alias="question"/>
+	 	<typeAlias type="pojo.web.dto.Reply" alias="reply"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -35,5 +36,6 @@
 		<mapper resource="mapper/RegistHouseMapper.xml"/>
 		<mapper resource="mapper/ReportMapper.xml"/>
 		<mapper resource="mapper/QuestionMapper.xml"/>
+		<mapper resource="mapper/ReplyMapper.xml"/>
 	</mappers>
 </configuration>

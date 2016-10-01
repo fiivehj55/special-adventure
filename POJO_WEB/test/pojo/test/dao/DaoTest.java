@@ -17,10 +17,13 @@ import pojo.web.dao.QuestionDao;
 import pojo.web.dao.QuestionDaoImpl;
 import pojo.web.dao.RegistHouseDao;
 import pojo.web.dao.RegistHouseDaoImpl;
+import pojo.web.dao.ReplyDao;
+import pojo.web.dao.ReplyDaoImpl;
 import pojo.web.dto.House;
 import pojo.web.dto.Member;
 import pojo.web.dto.Question;
 import pojo.web.dto.RegistHouse;
+import pojo.web.dto.Reply;
 import pojo.web.util.DBUtil;
 
 public class DaoTest {
@@ -31,6 +34,7 @@ public class DaoTest {
 	HouseDao hdao = HouseDaoImpl.getInstance();
 	RegistHouseDao rhdao = RegistHouseDaoImpl.getInstance();
 	QuestionDao qdao = QuestionDaoImpl.getInstance();
+	ReplyDao rdao = ReplyDaoImpl.getInstance();
 
 	/** MEMBER TEST */	
 	@Test
@@ -214,6 +218,54 @@ public class DaoTest {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			int result = qdao.deleteQuestion(session, 1);
 			qdao.deleteQuestion(session, 1);
+			logger.trace("List: {}", result);
+		}
+	}
+	
+	/** REPLY_TEST */
+	@Test
+	public void testSelectAllReply() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<Reply> reply = rdao.selectAllReply(session);
+			logger.trace("List: {}", reply);
+		}
+	}
+	
+	@Test
+	public void testSelectByReplyNo() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Reply reply = rdao.selectByIdReplyNo(session, 1);
+			logger.trace("List: {}", reply);
+		}
+	}
+	
+	@Test
+	public void testInsertReply() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Calendar cd = Calendar.getInstance();
+			Date dd = cd.getTime();
+			Reply reply = new Reply(2, "정말 깨끗하고 좋았어요.", dd, "hong", 2);
+			int result = rdao.insertReply(session, reply);
+			logger.trace("List: {}", reply);
+		}
+	}
+	
+	@Test
+	public void testUpdateReply() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Reply reply = new Reply(2, "정말 깨끗하고 좋았어요. 쾌적합니다.", dd, "hong", 2);
+			int result = rdao.updateReply(session, reply);
+			logger.trace("List: {}", reply);
+		}
+	}
+	
+	@Test
+	public void testDeletReply() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			int result = rdao.deleteReply(session, 1);
+			rdao.deleteReply(session, 1);
 			logger.trace("List: {}", result);
 		}
 	}

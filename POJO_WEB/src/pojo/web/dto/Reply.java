@@ -34,6 +34,15 @@ public class Reply implements Serializable {
 	 */
 	public Reply() {
 	}
+	
+	public Reply(Integer replyNo, String replyContent, Date replyDate, String memberId, Integer detailId) {
+		super();
+		this.replyNo = replyNo;
+		this.replyContent = replyContent;
+		this.replyDate = replyDate;
+		this.memberId = memberId;
+		this.detailId = detailId;
+	}
 
 	/**
 	 * REPLY_NO을 설정합니다..
