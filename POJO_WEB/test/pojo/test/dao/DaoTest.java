@@ -1,7 +1,5 @@
 package pojo.test.dao;
 
-import static org.junit.Assert.fail;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -30,12 +28,7 @@ public class DaoTest {
 	HouseDao hdao = HouseDaoImpl.getInstance();
 	RegistHouseDao rhdao = RegistHouseDaoImpl.getInstance();
 
-	/** MEMBER TEST */
-	@Test
-	public void testTemplate() {
-		fail("Not yet implemented");
-	}
-	
+	/** MEMBER TEST */	
 	@Test
 	public void testSelectAllMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
@@ -55,7 +48,7 @@ public class DaoTest {
 	@Test
 	public void testInsertMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Member member = new Member("yang", "양희준", "1423", "01029051216", "yang@naver.com", "male", "/index.jsp/img", "안녕하세요");
+			Member member = new Member("yang", "양희준", "1423", "01029051216", "yang@naver.com", "male", "/index.jsp/img", "안녕하세요", 2, "회원");
 			int result = mdao.insertMember(session, member);
 			logger.trace("List: {}", member);
 		}
@@ -99,7 +92,7 @@ public class DaoTest {
 	@Test
 	public void testInsertHouse() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			House house = new House(2, "대전빌라", "대전시 유성구 장대동", 400000, 7, "hello");
+			House house = new House(2, "대전빌라", "대전시 유성구 장대동", 400000, 7, "hello", "hong", 2);
 			int result = hdao.insertHouse(session, house);
 			logger.trace("List: {}", house);
 		}
@@ -155,8 +148,10 @@ public class DaoTest {
 	// date type 넣는 Query 생각하기
 	@Test
 	public void testUpdateRegistHouse() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			RegistHouse rHouse = new RegistHouse(2, null, null);
+			RegistHouse rHouse = new RegistHouse(2, dd, dd);
 			int result = rhdao.updateRegistHouse(session, rHouse);
 			logger.trace("List: {}", rHouse);
 		}

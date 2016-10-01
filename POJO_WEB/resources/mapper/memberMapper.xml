@@ -14,7 +14,7 @@
     
     <insert id="insertMember" parameterType="member">
         insert into MEMBER
-        values (#{memId}, #{memName}, #{memPassword}, #{memPhone}, #{memEmail}, #{memGender}, #{memImg}, #{memIntro})
+        values (#{memId}, #{memName}, #{memPassword}, #{memPhone}, #{memEmail}, #{memGender}, #{memImg}, #{memIntro}, #{detailId}, #{detailGrade})
     </insert>
     
     <update id="updateMember" parameterType="member">

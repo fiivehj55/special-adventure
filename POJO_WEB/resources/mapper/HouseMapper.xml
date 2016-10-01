@@ -3,34 +3,36 @@
 <mapper namespace="pojo.web.dao.houseMapper">
 
 	<select id="selectAllHouse" resultMap="houseBase">
-		select * from house
+		select * from HOUSE
 	</select>
 	
 	<select id="selectByIdHouse" parameterType="int" resultMap="houseBase">
-		select * from house where house_no = #{num}
+		select * from HOUSE where HOUSE_NO = #{houseNo}
 	</select>
 
 	<insert id="insertHouse" parameterType="house">
-		insert into house values(#{houseNo},#{houseName},
-		#{houseAddress},#{housePrice},#{houseScore},#{houseInfo})
+		insert into HOUSE 
+		values(#{houseNo}, #{houseName}, #{houseAddress}, #{housePrice}, #{houseScore}, #{houseInfo}, #{memberId}, #{detailId})
 	</insert>
 	
 	<update id="updateHouse" parameterType="house">
-		update house set
-		house_name=#{houseName},house_address=#{houseAddress},house_price=#{housePrice}
+		update HOUSE set
+		HOUSE_NAME=#{houseName}, HOUSE_ADDRESS=#{houseAddress}, HOUSE_PRICE=#{housePrice}
 		where house_no=#{houseNo}
 	</update>
 	
 	<delete id="deleteHouse" parameterType="int">
-		delete house where house_no = #{num}
+		delete HOUSE where HOUSE_NO = #{houseNo}
 	</delete>
 
 	<resultMap type="house" id="houseBase">
-		<id column="house_no" property="houseNo" />
-		<result column="house_name" property="houseName" />
-		<result column="house_address" property="houseAddress" />
-		<result column="house_price" property="housePrice" />
-		<result column="house_score" property="houseScore" />
-		<result column="house_info" property="houseInfo" />
+		<id column="HOSUE_NI" property="houseNo" />
+		<result column="HOUSE_NAME" property="houseName" />
+		<result column="HOUSE_ADDRESS" property="houseAddress" />
+		<result column="HOUSE_PRICE" property="housePrice" />
+		<result column="HOUSE_SCORE" property="houseScore" />
+		<result column="HOUSE_INFO" property="houseInfo" />
+		<result column="MEM_ID" property="memberId" />
+		<result column="DETAIL_ID" property="detailId" />
 	</resultMap>
 </mapper>

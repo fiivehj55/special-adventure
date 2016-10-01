@@ -53,6 +53,19 @@ public class House implements Serializable {
 		this.houseScore = houseScore;
 		this.houseInfo = houseInfo;
 	}
+	
+	public House(Integer houseNo, String houseName, String houseAddress, Integer housePrice, Integer houseScore,
+			String houseInfo, String memberId, Integer detailId) {
+		super();
+		this.houseNo = houseNo;
+		this.houseName = houseName;
+		this.houseAddress = houseAddress;
+		this.housePrice = housePrice;
+		this.houseScore = houseScore;
+		this.houseInfo = houseInfo;
+		this.memberId = memberId;
+		this.detailId = detailId;
+	}
 
 	/**
 	 * HOUSE_NO을 설정합니다..
