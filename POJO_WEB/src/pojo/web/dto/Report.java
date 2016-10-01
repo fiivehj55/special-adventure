@@ -210,4 +210,11 @@ public class Report implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Report [reportNo=" + reportNo + ", reportCategory=" + reportCategory + ", reportContent="
+				+ reportContent + ", reportCusId=" + reportCusId + ", regitDate=" + regitDate + ", memberId=" + memberId
+				+ ", detailId=" + detailId + "]";
+	}
+
 }

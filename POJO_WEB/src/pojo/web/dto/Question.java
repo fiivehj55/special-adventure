@@ -37,6 +37,17 @@ public class Question implements Serializable {
 	 */
 	public Question() {
 	}
+	
+	public Question(Integer questNo, String questTitle, String questContent, Date questDate, String memberId,
+			Integer detailId) {
+		super();
+		this.questNo = questNo;
+		this.questTitle = questTitle;
+		this.questContent = questContent;
+		this.questDate = questDate;
+		this.memberId = memberId;
+		this.detailId = detailId;
+	}
 
 	/**
 	 * QUEST_NO을 설정합니다..
@@ -188,4 +199,10 @@ public class Question implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Question [questNo=" + questNo + ", questTitle=" + questTitle + ", questContent=" + questContent
+				+ ", questDate=" + questDate + ", memberId=" + memberId + ", detailId=" + detailId + "]";
+	}
+	
 }

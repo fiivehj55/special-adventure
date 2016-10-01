@@ -129,4 +129,9 @@ public class RegistHouse implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "RegistHouse [rhId=" + rhId + ", checkIn=" + checkIn + ", checkOut=" + checkOut + "]";
+	}
+	
 }

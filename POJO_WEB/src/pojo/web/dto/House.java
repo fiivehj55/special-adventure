@@ -255,4 +255,11 @@ public class House implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "House [houseNo=" + houseNo + ", houseName=" + houseName + ", houseAddress=" + houseAddress
+				+ ", housePrice=" + housePrice + ", houseScore=" + houseScore + ", houseInfo=" + houseInfo
+				+ ", memberId=" + memberId + ", detailId=" + detailId + "]";
+	}
+
 }

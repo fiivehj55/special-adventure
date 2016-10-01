@@ -13,10 +13,13 @@ import pojo.web.dao.HouseDao;
 import pojo.web.dao.HouseDaoImpl;
 import pojo.web.dao.MemberDao;
 import pojo.web.dao.MemberDaoImpl;
+import pojo.web.dao.QuestionDao;
+import pojo.web.dao.QuestionDaoImpl;
 import pojo.web.dao.RegistHouseDao;
 import pojo.web.dao.RegistHouseDaoImpl;
 import pojo.web.dto.House;
 import pojo.web.dto.Member;
+import pojo.web.dto.Question;
 import pojo.web.dto.RegistHouse;
 import pojo.web.util.DBUtil;
 
@@ -27,6 +30,7 @@ public class DaoTest {
 	MemberDao mdao = MemberDaoImpl.getInstance();
 	HouseDao hdao = HouseDaoImpl.getInstance();
 	RegistHouseDao rhdao = RegistHouseDaoImpl.getInstance();
+	QuestionDao qdao = QuestionDaoImpl.getInstance();
 
 	/** MEMBER TEST */	
 	@Test
@@ -101,7 +105,7 @@ public class DaoTest {
 	@Test
 	   public void testUpdateHouse() {
 	      try(SqlSession session = DBUtil.getInstance().getSession()){
-	         House house = new House(1, "빌라", "대전시 유성구 장대동", 400000, 7, "hello");
+	         House house = new House(1, "빌라", "대전시 유성구 장대동", 400000, 7, "hello", "hong", 2);
 	         int result = hdao.updateHouse(session, house);
 	         logger.trace("List: {}", house);
 	      }
@@ -166,4 +170,51 @@ public class DaoTest {
 		}
 	}
 	
+	/** QUESTION_TEST */
+	@Test
+	public void testSelectAllQuestion() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<Question> question = qdao.selectAllQuestion(session);
+			logger.trace("List: {}", question);
+		}
+	}
+	
+	@Test
+	public void testSelectByQuestNo() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Question question = qdao.selectByQuestNo(session, 1);
+			logger.trace("List: {}", question);
+		}
+	}
+	
+	@Test
+	public void testInsertQuestion() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Calendar cd = Calendar.getInstance();
+			Date dd = cd.getTime();
+			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다.", dd, "hong", 2);
+			int result = qdao.insertQuestion(session, question);
+			logger.trace("List: {}", question);
+		}
+	}
+	
+	@Test
+	public void testUpdateQuestion() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다. 조치를 취해주세요.", null, "hong", 2);
+			int result = qdao.updateQuestion(session, question);
+			logger.trace("List: {}", question);
+		}
+	}
+	
+	@Test
+	public void testDeletQuestion() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			int result = qdao.deleteQuestion(session, 1);
+			qdao.deleteQuestion(session, 1);
+			logger.trace("List: {}", result);
+		}
+	}
 }

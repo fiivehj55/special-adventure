@@ -166,4 +166,10 @@ public class Reply implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Reply [replyNo=" + replyNo + ", replyContent=" + replyContent + ", replyDate=" + replyDate
+				+ ", memberId=" + memberId + ", detailId=" + detailId + "]";
+	}
+
 }

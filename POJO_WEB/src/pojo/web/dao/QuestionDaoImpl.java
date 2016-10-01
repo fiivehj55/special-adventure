@@ -25,32 +25,32 @@ public class QuestionDaoImpl implements QuestionDao {
 
 	@Override
 	public List<Question> selectAllQuestion(SqlSession session) {
-		// TODO Auto-generated method stub
-		return null;
+		String stmt = QUESTION_MAP + "selectAllQuestion";
+		return session.selectList(stmt);
 	}
 
 	@Override
 	public Question selectByQuestNo(SqlSession session, int questNo) {
-		// TODO Auto-generated method stub
-		return null;
+		String stmt = QUESTION_MAP + "selectByQuestNo";
+		return session.selectOne(stmt, questNo);
 	}
 
 	@Override
 	public int insertQuestion(SqlSession session, Question question) {
-		// TODO Auto-generated method stub
-		return 0;
+		String stmt = QUESTION_MAP + "insertQuestion";
+		return session.update(stmt, question);
 	}
 
 	@Override
 	public int updateQuestion(SqlSession session, Question question) {
-		// TODO Auto-generated method stub
-		return 0;
+		String stmt = QUESTION_MAP + "updateQuestion";
+		return session.update(stmt, question);
 	}
 
 	@Override
 	public int deleteQuestion(SqlSession session, int questNo) {
-		// TODO Auto-generated method stub
-		return 0;
+		String stmt = QUESTION_MAP + "deleteQuestion";
+		return session.update(stmt, questNo);
 	}
 
 }
