@@ -25,31 +25,31 @@ public class MemberDetailDaoImpl implements MemberDetailDao {
 	
 	@Override
 	public List<MemberDetail> selectAllMemberDetail(SqlSession session) {
-		// TODO Auto-generated method stub
+		String stmt = MEMBER_DETAIL_MAP + "";
 		return null;
 	}
 
 	@Override
 	public MemberDetail selectByMemberDetail(SqlSession session, int detailId) {
-		// TODO Auto-generated method stub
+		String stmt = MEMBER_DETAIL_MAP + "";
 		return null;
 	}
 
 	@Override
 	public int insertMemberDetail(SqlSession session, MemberDetail mDetail) {
-		// TODO Auto-generated method stub
+		String stmt = MEMBER_DETAIL_MAP + "";
 		return 0;
 	}
 
 	@Override
 	public int updateMemberDetail(SqlSession session, MemberDetail mDetail) {
-		// TODO Auto-generated method stub
+		String stmt = MEMBER_DETAIL_MAP + "";
 		return 0;
 	}
 
 	@Override
 	public int deleteMemberDetail(SqlSession session, int deltailId) {
-		// TODO Auto-generated method stub
+		String stmt = MEMBER_DETAIL_MAP + "";
 		return 0;
 	}
 	

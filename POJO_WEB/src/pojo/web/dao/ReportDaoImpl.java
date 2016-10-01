@@ -25,31 +25,31 @@ public class ReportDaoImpl implements ReportDao {
 
 	@Override
 	public List<Report> selectAllReport(SqlSession session) {
-		// TODO Auto-generated method stub
+		String stmt = REPORT_MAP + "";
 		return null;
 	}
 
 	@Override
 	public Report selectByReport(SqlSession session, int reportNo) {
-		// TODO Auto-generated method stub
+		String stmt = REPORT_MAP + "";
 		return null;
 	}
 
 	@Override
 	public int insertReport(SqlSession session, Report report) {
-		// TODO Auto-generated method stub
+		String stmt = REPORT_MAP + "";
 		return 0;
 	}
 
 	@Override
 	public int updateReport(SqlSession session, Report report) {
-		// TODO Auto-generated method stub
+		String stmt = REPORT_MAP + "";
 		return 0;
 	}
 
 	@Override
 	public int deleteReport(SqlSession session, int reportNo) {
-		// TODO Auto-generated method stub
+		String stmt = REPORT_MAP + "";
 		return 0;
 	}
 
