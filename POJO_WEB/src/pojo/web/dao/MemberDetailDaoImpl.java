@@ -49,7 +49,7 @@ public class MemberDetailDaoImpl implements MemberDetailDao {
 
 	@Override
 	public int deleteMemberDetail(SqlSession session, int deltailId) {
-		String stmt = MEMBER_DETAIL_MAP + "";
+		String stmt = MEMBER_DETAIL_MAP + ""; 
 		return 0;
 	}
 	
