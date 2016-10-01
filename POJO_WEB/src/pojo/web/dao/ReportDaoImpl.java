@@ -25,32 +25,32 @@ public class ReportDaoImpl implements ReportDao {
 
 	@Override
 	public List<Report> selectAllReport(SqlSession session) {
-		String stmt = REPORT_MAP + "";
-		return null;
+		String stmt = REPORT_MAP + "selectAllReport";
+		return session.selectList(stmt);
 	}
 
 	@Override
 	public Report selectByReport(SqlSession session, int reportNo) {
-		String stmt = REPORT_MAP + "";
-		return null;
+		String stmt = REPORT_MAP + "selectByReortNo";
+		return session.selectOne(stmt, reportNo);
 	}
 
 	@Override
 	public int insertReport(SqlSession session, Report report) {
-		String stmt = REPORT_MAP + "";
-		return 0;
+		String stmt = REPORT_MAP + "insertReport";
+		return session.update(stmt, report);
 	}
 
 	@Override
 	public int updateReport(SqlSession session, Report report) {
-		String stmt = REPORT_MAP + "";
-		return 0;
+		String stmt = REPORT_MAP + "updateReport";
+		return session.update(stmt, report);
 	}
 
 	@Override
 	public int deleteReport(SqlSession session, int reportNo) {
-		String stmt = REPORT_MAP + "";
-		return 0;
+		String stmt = REPORT_MAP + "deleteReport";
+		return session.update(stmt, reportNo);
 	}
 
 }

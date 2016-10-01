@@ -19,11 +19,14 @@ import pojo.web.dao.RegistHouseDao;
 import pojo.web.dao.RegistHouseDaoImpl;
 import pojo.web.dao.ReplyDao;
 import pojo.web.dao.ReplyDaoImpl;
+import pojo.web.dao.ReportDao;
+import pojo.web.dao.ReportDaoImpl;
 import pojo.web.dto.House;
 import pojo.web.dto.Member;
 import pojo.web.dto.Question;
 import pojo.web.dto.RegistHouse;
 import pojo.web.dto.Reply;
+import pojo.web.dto.Report;
 import pojo.web.util.DBUtil;
 
 public class DaoTest {
@@ -35,6 +38,7 @@ public class DaoTest {
 	RegistHouseDao rhdao = RegistHouseDaoImpl.getInstance();
 	QuestionDao qdao = QuestionDaoImpl.getInstance();
 	ReplyDao rdao = ReplyDaoImpl.getInstance();
+	ReportDao rpdao = ReportDaoImpl.getInstance();
 
 	/** MEMBER TEST */	
 	@Test
@@ -266,6 +270,54 @@ public class DaoTest {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			int result = rdao.deleteReply(session, 1);
 			rdao.deleteReply(session, 1);
+			logger.trace("List: {}", result);
+		}
+	}
+	
+	/** REPORT_TEST */
+	@Test
+	public void testSelectAllReport() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<Report> report = rpdao.selectAllReport(session);
+			logger.trace("List: {}", report);
+		}
+	}
+	
+	@Test
+	public void testSelectByReportNo() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Report report = rpdao.selectByReport(session, 1);
+			logger.trace("List: {}", report);
+		}
+	}
+	
+	@Test
+	public void testInsertReport() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Calendar cd = Calendar.getInstance();
+			Date dd = cd.getTime();
+			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~", dd, "hong", 2);
+			int result = rpdao.insertReport(session, report);
+			logger.trace("List: {}", report);
+		}
+	}
+	
+	@Test
+	public void testUpdateReport() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~ 할아버지의 명예를 걸고 찾아낼꺼에여", dd, "hong", 2);
+			int result = rpdao.updateReport(session, report);
+			logger.trace("List: {}", report);
+		}
+	}
+	
+	@Test
+	public void testDeletReport() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			int result = rpdao.deleteReport(session, 1);
+			rpdao.deleteReport(session, 1);
 			logger.trace("List: {}", result);
 		}
 	}

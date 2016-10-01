@@ -19,12 +19,12 @@ public class Report implements Serializable {
 
 	/** REPORT_CATEGORY. */
 	private String reportCategory;
+	
+	/** REPORT_SUBJECT */
+	private String reportSubject;
 
 	/** REPORT_CONTENT. */
 	private String reportContent;
-
-	/** REPORT_CUS_ID. */
-	private String reportCusId;
 
 	/** REGIT_DATE. */
 	private Date regitDate;
@@ -39,6 +39,18 @@ public class Report implements Serializable {
 	 * 생성자.
 	 */
 	public Report() {
+	}
+	
+	public Report(Integer reportNo, String reportCategory, String reportSubject, String reportContent, Date regitDate,
+			String memberId, Integer detailId) {
+		super();
+		this.reportNo = reportNo;
+		this.reportCategory = reportCategory;
+		this.reportSubject = reportSubject;
+		this.reportContent = reportContent;
+		this.regitDate = regitDate;
+		this.memberId = memberId;
+		this.detailId = detailId;
 	}
 
 	/**
@@ -78,6 +90,14 @@ public class Report implements Serializable {
 	public String getReportCategory() {
 		return this.reportCategory;
 	}
+	
+	public String getReportSubject() {
+		return reportSubject;
+	}
+
+	public void setReportSubject(String reportSubject) {
+		this.reportSubject = reportSubject;
+	}
 
 	/**
 	 * REPORT_CONTENT을 설정합니다..
@@ -96,25 +116,6 @@ public class Report implements Serializable {
 	 */
 	public String getReportContent() {
 		return this.reportContent;
-	}
-
-	/**
-	 * REPORT_CUS_ID을 설정합니다..
-	 * 
-	 * @param reportCusId
-	 *            REPORT_CUS_ID
-	 */
-	public void setReportCusId(String reportCusId) {
-		this.reportCusId = reportCusId;
-	}
-
-	/**
-	 * REPORT_CUS_ID을 가져옵니다..
-	 * 
-	 * @return REPORT_CUS_ID
-	 */
-	public String getReportCusId() {
-		return this.reportCusId;
 	}
 
 	/**
@@ -213,8 +214,8 @@ public class Report implements Serializable {
 	@Override
 	public String toString() {
 		return "Report [reportNo=" + reportNo + ", reportCategory=" + reportCategory + ", reportContent="
-				+ reportContent + ", reportCusId=" + reportCusId + ", regitDate=" + regitDate + ", memberId=" + memberId
-				+ ", detailId=" + detailId + "]";
+				+ reportContent + ", regitDate=" + regitDate + ", memberId=" + memberId + ", detailId=" + detailId
+				+ "]";
 	}
 
 }

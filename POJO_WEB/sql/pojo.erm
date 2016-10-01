@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2016-09-30 18:50:44</creation_date>
-			<updated_date>2016-09-30 19:03:36</updated_date>
+			<updated_date>2016-10-01 17:46:15</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -634,22 +634,6 @@
 		</word>
 		<word>
 			<id>29</id>
-			<length>20</length>
-			<decimal>null</decimal>
-			<array>false</array>
-			<array_dimension>null</array_dimension>
-			<unsigned>false</unsigned>
-			<zerofill>false</zerofill>
-			<binary>false</binary>
-			<args></args>
-			<char_semantics>true</char_semantics>
-			<description></description>
-			<logical_name>REPORT_CUS_ID</logical_name>
-			<physical_name>REPORT_CUS_ID</physical_name>
-			<type>varchar(n)</type>
-		</word>
-		<word>
-			<id>30</id>
 			<length>30</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -663,6 +647,22 @@
 			<logical_name>REPORT_NO</logical_name>
 			<physical_name>REPORT_NO</physical_name>
 			<type>decimal(p)</type>
+		</word>
+		<word>
+			<id>30</id>
+			<length>40</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>true</char_semantics>
+			<description></description>
+			<logical_name>REPORT_SUBJECT</logical_name>
+			<physical_name>REPORT_SUBJECT</physical_name>
+			<type>varchar(n)</type>
 		</word>
 		<word>
 			<id>31</id>
@@ -2015,7 +2015,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>30</word_id>
+					<word_id>29</word_id>
 					<id>34</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2081,7 +2081,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>28</word_id>
+					<word_id>30</word_id>
 					<id>36</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2114,7 +2114,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>29</word_id>
+					<word_id>28</word_id>
 					<id>37</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
