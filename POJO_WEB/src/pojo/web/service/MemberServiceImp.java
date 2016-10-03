@@ -48,14 +48,20 @@ public class MemberServiceImp implements MemberService{
 		int result = 0;
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			result = dao.deleteMember(session, id, password);
+			if(result == 1){
+				session.commit();
+			}
 		}
-		return 0;
+		return result;
 	}
 	@Override
 	public int join(Member member) {	
 		int result = 0;
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			result = dao.insertMember(session, member);
+			if(result == 1){
+				session.commit();
+			}
 		}
 		return result;
 	}
@@ -64,6 +70,9 @@ public class MemberServiceImp implements MemberService{
 		int result = 0;
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			result = dao.updateMember(session, member);
+			if(result == 1){
+				session.commit();
+			}
 		}
 		return result;
 	}
