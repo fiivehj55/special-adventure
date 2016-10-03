@@ -1,6 +1,8 @@
 package pojo.web.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -48,9 +50,12 @@ public class MemberDaoImpl implements MemberDao {
 	}
 
 	@Override
-	public int deleteMember(SqlSession session, String memId) {
+	public int deleteMember(SqlSession session, String memId, String memPassword) {
 		String stmt = MEMBER_MAP + "deleteMember";
-		return session.update(stmt, memId);
+		Map<String, String> member = new HashMap<String, String>();
+		member.put("memId", memId);
+		member.put("memPassword", memPassword);
+		return session.delete(stmt, member);
 	}
 	
 }
