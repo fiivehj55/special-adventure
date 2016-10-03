@@ -6,9 +6,9 @@ import pojo.web.dto.Report;
 //신고게시판
 public interface ReportService {
 	
-	List<Report> selectAllReport(String id);
+	List<Report> selectAllReport();
 	
-	Report selectByReport(int reportNo);
+	Report selectByReportNo(int reportNo);
 	
 	int insertReport(Report report);
 	
