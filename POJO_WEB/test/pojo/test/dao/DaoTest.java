@@ -13,6 +13,8 @@ import pojo.web.dao.HouseDao;
 import pojo.web.dao.HouseDaoImpl;
 import pojo.web.dao.MemberDao;
 import pojo.web.dao.MemberDaoImpl;
+import pojo.web.dao.MemberDetailDao;
+import pojo.web.dao.MemberDetailDaoImpl;
 import pojo.web.dao.QuestionDao;
 import pojo.web.dao.QuestionDaoImpl;
 import pojo.web.dao.RegistHouseDao;
@@ -23,6 +25,7 @@ import pojo.web.dao.ReportDao;
 import pojo.web.dao.ReportDaoImpl;
 import pojo.web.dto.House;
 import pojo.web.dto.Member;
+import pojo.web.dto.MemberDetail;
 import pojo.web.dto.Question;
 import pojo.web.dto.RegistHouse;
 import pojo.web.dto.Reply;
@@ -39,6 +42,7 @@ public class DaoTest {
 	QuestionDao qdao = QuestionDaoImpl.getInstance();
 	ReplyDao rdao = ReplyDaoImpl.getInstance();
 	ReportDao rpdao = ReportDaoImpl.getInstance();
+	MemberDetailDao mddao = MemberDetailDaoImpl.getInstance();
 
 	/** MEMBER TEST */	
 	@Test
@@ -321,4 +325,51 @@ public class DaoTest {
 			logger.trace("List: {}", result);
 		}
 	}
+	/** MEMBERDEATIL_TEST */
+	@Test
+	public void testSelectAllMemberDetail() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<MemberDetail> memberDetail = mddao.selectAllMemberDetail(session);
+			logger.trace("List: {}", memberDetail);
+		}
+	}
+	
+	@Test
+	public void testSelectByMemberDetailNo() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			MemberDetail memberDetail = mddao.selectByMemberDetail(session, 1);
+			logger.trace("List: {}", memberDetail);
+		}
+	}
+	
+	@Test
+	public void testInsertMemberDetail() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			Calendar cd = Calendar.getInstance();
+			Date dd = cd.getTime();
+			MemberDetail memberDetail = new MemberDetail(3,"회원");
+			int result = mddao.insertMemberDetail(session, memberDetail);
+			logger.trace("List: {}", result);
+		}
+	}
+	
+	@Test
+	public void testUpdateMemberDetail() {
+		Calendar cd = Calendar.getInstance();
+		Date dd = cd.getTime();
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			MemberDetail memberDetail = new MemberDetail(2,"최고관리자");
+			int result = mddao.updateMemberDetail(session, memberDetail);
+			logger.trace("List: {}", result);
+		}
+	}
+	
+	@Test
+	public void testDeletMemberDetail() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			int result = mddao.deleteMemberDetail(session, 2);
+			logger.trace("List: {}", result);
+		}
+	}
+	
 }

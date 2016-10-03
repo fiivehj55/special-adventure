@@ -24,6 +24,14 @@ public class MemberDetail implements Serializable {
 	 */
 	public MemberDetail() {
 	}
+	
+
+	public MemberDetail(Integer detailId, String detailGrade) {
+		super();
+		this.detailId = detailId;
+		this.detailGrade = detailGrade;
+	}
+
 
 	/**
 	 * DETAIL_ID을 설정합니다..
