@@ -306,7 +306,7 @@ public class DaoTest {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			Calendar cd = Calendar.getInstance();
 			Date dd = cd.getTime();
-			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~", dd, "hong", 2);
+			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~", dd, "hong", 2, 2);
 			int result = rpdao.insertReport(session, report);
 			logger.trace("List: {}", report);
 		}
@@ -317,7 +317,7 @@ public class DaoTest {
 		Calendar cd = Calendar.getInstance();
 		Date dd = cd.getTime();
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~ 할아버지의 명예를 걸고 찾아낼꺼에여", dd, "hong", 2);
+			Report report = new Report(2, "블랙리스트", "이사람 신고합니다.", "이 사람 사기꾼이에여~ 할아버지의 명예를 걸고 찾아낼꺼에여", dd, "hong", 2, 2);
 			int result = rpdao.updateReport(session, report);
 			logger.trace("List: {}", report);
 		}

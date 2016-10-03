@@ -34,6 +34,9 @@ public class Report implements Serializable {
 
 	/** DETAIL_ID. */
 	private Integer detailId;
+	
+	/** REPORT_REPLY_NO */
+	private Integer reportReplyNo;
 
 	/**
 	 * 생성자.
@@ -42,7 +45,7 @@ public class Report implements Serializable {
 	}
 	
 	public Report(Integer reportNo, String reportCategory, String reportSubject, String reportContent, Date regitDate,
-			String memberId, Integer detailId) {
+			String memberId, Integer detailId, Integer reportReplyNo) {
 		super();
 		this.reportNo = reportNo;
 		this.reportCategory = reportCategory;
@@ -51,6 +54,7 @@ public class Report implements Serializable {
 		this.regitDate = regitDate;
 		this.memberId = memberId;
 		this.detailId = detailId;
+		this.reportReplyNo = reportReplyNo;
 	}
 
 	/**
@@ -174,6 +178,14 @@ public class Report implements Serializable {
 	public Integer getDetailId() {
 		return this.detailId;
 	}
+	
+	public Integer getReportReplyNo() {
+		return reportReplyNo;
+	}
+
+	public void setReportReplyNo(Integer reportReplyNo) {
+		this.reportReplyNo = reportReplyNo;
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -213,9 +225,9 @@ public class Report implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Report [reportNo=" + reportNo + ", reportCategory=" + reportCategory + ", reportContent="
-				+ reportContent + ", regitDate=" + regitDate + ", memberId=" + memberId + ", detailId=" + detailId
-				+ "]";
+		return "Report [reportNo=" + reportNo + ", reportCategory=" + reportCategory + ", reportSubject="
+				+ reportSubject + ", reportContent=" + reportContent + ", regitDate=" + regitDate + ", memberId="
+				+ memberId + ", detailId=" + detailId + ", reportReplyNo=" + reportReplyNo + "]";
 	}
 
 }

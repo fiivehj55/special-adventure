@@ -12,7 +12,7 @@
 	
 	<insert id="insertReport" parameterType="report">
 		insert into REPORT
-		values (#{reportNo}, #{reportCategory}, #{reportSubject}, #{reportContent}, #{regitDate}, #{memberId}, #{detailId})
+		values (#{reportNo}, #{reportCategory}, #{reportSubject}, #{reportContent}, #{regitDate}, #{memberId}, #{detailId}, #{reportReplyNo})
 	</insert>
 	
 	<update id="updateReport" parameterType="report">
@@ -33,5 +33,6 @@
 		<result column="REGIT_DATE" property="regitDate" />
 		<result column="MEMBER_ID" property="memberId" />
 		<result column="DETAIL_ID" property="detailId" />
+		<result column="REPORT_REPLY_NO" property="reportReplyNo" />
 	</resultMap>
 </mapper>
