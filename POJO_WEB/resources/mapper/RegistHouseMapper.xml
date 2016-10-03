@@ -12,7 +12,7 @@
     
     <insert id="insertRegistHouse" parameterType="registHouse">
         insert into REGIST_HOUSE
-        values (#{rhId}, #{checkIn}, #{checkOut})
+        values (#{rhId}, #{checkIn}, #{checkOut}, #{houseNo}, #{memberId})
     </insert>
     
     <update id="updateRegistHouse" parameterType="registHouse">
@@ -29,5 +29,7 @@
         <id column="RH_ID" property="rhId" />
         <result column="CHECK_IN" property="checkIn" />
         <result column="CHECK_OUT" property="checkOut" />
+        <result column="HOUSE_NO" property="houseNo" />
+        <result column="MEMBER_ID" property="memberId" />
     </resultMap>
 </mapper>

@@ -161,7 +161,7 @@ public class DaoTest {
 		Calendar cd = Calendar.getInstance();
 		Date dd = cd.getTime();
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			RegistHouse rhouse = new RegistHouse(2, dd, dd);
+			RegistHouse rhouse = new RegistHouse(2, dd, dd, 1, "hong");
 			int result = rhdao.insertRegistHouse(session, rhouse);
 			logger.trace("List: {}", rhouse);
 		}

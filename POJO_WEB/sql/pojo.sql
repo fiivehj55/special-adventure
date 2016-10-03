@@ -48,6 +48,8 @@ drop table REPLY;
    (	"RH_ID" NUMBER(20,0) NOT NULL ENABLE, 
 	"CHECK_IN" DATE, 
 	"CHECK_OUT" DATE, 
+	"HOUSE_NO" NUMBER(30,0), 
+	"MEMBER_ID" VARCHAR2(30 BYTE), 
 	 CONSTRAINT "REGIST_HOUSE_PK" PRIMARY KEY ("RH_ID")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -87,6 +89,7 @@ drop table REPLY;
 	"QUEST_DATE" DATE, 
 	"MEMBER_ID" VARCHAR2(30 BYTE), 
 	"DETAIL_ID" NUMBER(20,0), 
+  "QUEST_REPLY_NO" NUMBER(30,0),
 	 CONSTRAINT "QUESTION_PK" PRIMARY KEY ("QUEST_NO")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -138,15 +141,15 @@ drop table REPLY;
   TABLESPACE "USERS" ;
 
 
-insert into MEMBER values ('hong', 'È«±æµ¿', '1234', '01012345678', 'abc@naver.com', 'male', null, 'hello', 2, 'È¸¿ø');
-insert into MEMBER values ('jang', 'Àå±æ»ê', '5678', '01012345678', 'abc@naver.com', 'male', null, 'hello', 2, 'È¸¿ø');
-insert into MEMBER values ('admin', '°ü¸®ÀÚ', 'admin', '01012345678', 'abc@naver.com', 'male', null, 'hello', 1, 'ÃÖ°í°üÁöÀÚ');
-insert into MEMBER_DETAIL values (1, 'ÃÖ°í°ü¸®ÀÚ');
-insert into MEMBER_DETAIL values (2, 'È¸¿ø');
-insert into HOUSE values (1, '°øÁÖºô¶ó', 'Ãµ¾È½Ã ¼­ºÏ±¸ µÎÁ¤µ¿', 350000, 8.5, 'hello', 'hong', 2);
-insert into REGIST_HOUSE values (1, '2016/09/25', '2016/10/7');
-insert into QUESTION values (1, '»ç±â´çÇß¾î¿ä.', 'ÇÏ¿ì½º µî·ÏÀÚ°¡ °è¼Ó ÀüÈ­¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.', sysdate, 'jang', 2);
-insert into REPORT values (1, 'ÇÇÇØ»ç·Ê', 'ÀÌ »ç¶÷ ½Å°íÇÕ´Ï´Ù.', '¿¹¾àÀÚ°¡ ÀÔ±İÀ» ÇÏÁö ¾Ê½À´Ï´Ù.', sysdate, 'jang', 2);
-insert into REPLY values (1, 'ÁıÀ» ÀÌ¿ëÇß´Âµ¥ Á¤¸» ÁÁ¾Ò¾î¿ä', sysdate, 'hong', 2);
+insert into MEMBER values ('hong', 'í™ê¸¸ë™', '1234', '01012345678', 'abc@naver.com', 'male', null, 'hello', 2, 'íšŒì›');
+insert into MEMBER values ('jang', 'ì¥ê¸¸ì‚°', '5678', '01012345678', 'abc@naver.com', 'male', null, 'hello', 2, 'íšŒì›');
+insert into MEMBER values ('admin', 'ê´€ë¦¬ì', 'admin', '01012345678', 'abc@naver.com', 'male', null, 'hello', 1, 'ìµœê³ ê´€ì§€ì');
+insert into MEMBER_DETAIL values (1, 'ìµœê³ ê´€ë¦¬ì');
+insert into MEMBER_DETAIL values (2, 'íšŒì›');
+insert into HOUSE values (1, 'ê³µì£¼ë¹Œë¼', 'ì²œì•ˆì‹œ ì„œë¶êµ¬ ë‘ì •ë™', 350000, 8.5, 'hello', 'hong', 2);
+insert into REGIST_HOUSE values (1, '2016/09/25', '2016/10/7', 1, 'hong');
+insert into QUESTION values (1, 'ì‚¬ê¸°ë‹¹í–ˆì–´ìš”.', 'í•˜ìš°ìŠ¤ ë“±ë¡ìê°€ ê³„ì† ì „í™”ë¥¼ ë°›ì§€ ì•ŠìŠµë‹ˆë‹¤.', sysdate, 'jang', 2, null);
+insert into REPORT values (1, 'í”¼í•´ì‚¬ë¡€', 'ì´ ì‚¬ëŒ ì‹ ê³ í•©ë‹ˆë‹¤.', 'ì˜ˆì•½ìê°€ ì…ê¸ˆì„ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.', sysdate, 'jang', 2);
+insert into REPLY values (1, 'ì§‘ì„ ì´ìš©í–ˆëŠ”ë° ì •ë§ ì¢‹ì•˜ì–´ìš”', sysdate, 'hong', 2);
 
 commit;

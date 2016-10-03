@@ -22,6 +22,12 @@ public class RegistHouse implements Serializable {
 
 	/** CHECK_OUT. */
 	private Date checkOut;
+	
+	/** HOUSE_NO */
+	private Integer houseNo;
+	
+	/** MEMBER_ID */
+	private String memberId;
 
 	/**
 	 * 생성자.
@@ -34,6 +40,15 @@ public class RegistHouse implements Serializable {
 		this.rhId = rhId;
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
+	}
+	
+	public RegistHouse(Integer rhId, Date checkIn, Date checkOut, Integer houseNo, String memberId) {
+		super();
+		this.rhId = rhId;
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
+		this.houseNo = houseNo;
+		this.memberId = memberId;
 	}
 
 	/**
@@ -92,6 +107,22 @@ public class RegistHouse implements Serializable {
 	public Date getCheckOut() {
 		return this.checkOut;
 	}
+	
+	public Integer getHouseNo() {
+		return houseNo;
+	}
+
+	public void setHouseNo(Integer houseNo) {
+		this.houseNo = houseNo;
+	}
+
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -131,7 +162,8 @@ public class RegistHouse implements Serializable {
 
 	@Override
 	public String toString() {
-		return "RegistHouse [rhId=" + rhId + ", checkIn=" + checkIn + ", checkOut=" + checkOut + "]";
+		return "RegistHouse [rhId=" + rhId + ", checkIn=" + checkIn + ", checkOut=" + checkOut + ", houseNo=" + houseNo
+				+ ", memberId=" + memberId + "]";
 	}
-	
+
 }
