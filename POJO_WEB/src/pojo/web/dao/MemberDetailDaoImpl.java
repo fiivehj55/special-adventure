@@ -25,32 +25,32 @@ public class MemberDetailDaoImpl implements MemberDetailDao {
 	
 	@Override
 	public List<MemberDetail> selectAllMemberDetail(SqlSession session) {
-		String stmt = MEMBER_DETAIL_MAP + "";
-		return null;
+		String stmt = MEMBER_DETAIL_MAP + "selectAllMemberDetail";
+		return session.selectList(stmt);
 	}
 
 	@Override
 	public MemberDetail selectByMemberDetail(SqlSession session, int detailId) {
-		String stmt = MEMBER_DETAIL_MAP + "";
-		return null;
+		String stmt = MEMBER_DETAIL_MAP + "selectByMemberDetail";
+		return session.selectOne(stmt, detailId);
 	}
 
 	@Override
 	public int insertMemberDetail(SqlSession session, MemberDetail mDetail) {
-		String stmt = MEMBER_DETAIL_MAP + "";
-		return 0;
+		String stmt = MEMBER_DETAIL_MAP + "insertMemberDetail";
+		return session.insert(stmt, mDetail);
 	}
 
 	@Override
 	public int updateMemberDetail(SqlSession session, MemberDetail mDetail) {
-		String stmt = MEMBER_DETAIL_MAP + "";
-		return 0;
+		String stmt = MEMBER_DETAIL_MAP + "updateMemberDetail";
+		return session.update(stmt, mDetail);
 	}
 
 	@Override
 	public int deleteMemberDetail(SqlSession session, int deltailId) {
-		String stmt = MEMBER_DETAIL_MAP + ""; 
-		return 0;
+		String stmt = MEMBER_DETAIL_MAP + "deleteMemberDetail"; 
+		return session.delete(stmt, deltailId);
 	}
 	
 }
