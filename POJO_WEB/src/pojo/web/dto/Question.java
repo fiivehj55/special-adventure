@@ -31,6 +31,9 @@ public class Question implements Serializable {
 
 	/** DETAIL_ID. */
 	private Integer detailId;
+	
+	/** QUEST_REPLY_NO */
+	private Integer questReplyNo;
 
 	/**
 	 * 생성자.
@@ -39,7 +42,7 @@ public class Question implements Serializable {
 	}
 	
 	public Question(Integer questNo, String questTitle, String questContent, Date questDate, String memberId,
-			Integer detailId) {
+			Integer detailId, Integer questReplyNo) {
 		super();
 		this.questNo = questNo;
 		this.questTitle = questTitle;
@@ -47,6 +50,7 @@ public class Question implements Serializable {
 		this.questDate = questDate;
 		this.memberId = memberId;
 		this.detailId = detailId;
+		this.questReplyNo = questReplyNo;
 	}
 
 	/**
@@ -162,6 +166,14 @@ public class Question implements Serializable {
 	public Integer getDetailId() {
 		return this.detailId;
 	}
+	
+	public Integer getQuestReplyNo() {
+		return questReplyNo;
+	}
+
+	public void setQuestReplyNo(Integer questReplyNo) {
+		this.questReplyNo = questReplyNo;
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -202,7 +214,8 @@ public class Question implements Serializable {
 	@Override
 	public String toString() {
 		return "Question [questNo=" + questNo + ", questTitle=" + questTitle + ", questContent=" + questContent
-				+ ", questDate=" + questDate + ", memberId=" + memberId + ", detailId=" + detailId + "]";
+				+ ", questDate=" + questDate + ", memberId=" + memberId + ", detailId=" + detailId + ", questReplyNo="
+				+ questReplyNo + "]";
 	}
-	
+
 }

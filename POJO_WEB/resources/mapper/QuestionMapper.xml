@@ -11,7 +11,7 @@
 	
 	<insert id="insertQuestion" parameterType="question">
 	    insert into QUESTION
-	    values (#{questNo}, #{questTitle}, #{questContent}, #{questDate}, #{memberId}, #{detailId})
+	    values (#{questNo}, #{questTitle}, #{questContent}, #{questDate}, #{memberId}, #{detailId}, #{questReplyNo})
 	</insert>
 	
 	<update id="updateQuestion" parameterType="question">
@@ -31,5 +31,6 @@
 		<result column="QUEST_DATE" property="questDate" />
 		<result column="MEMBER_ID" property="memberId" />
 		<result column="DETAIL_ID" property="detailId" />
+		<result column="QUEST_REPLY_NO" property="questReplyNo" />
 	</resultMap>
 </mapper>

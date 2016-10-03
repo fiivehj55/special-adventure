@@ -204,7 +204,7 @@ public class DaoTest {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
 			Calendar cd = Calendar.getInstance();
 			Date dd = cd.getTime();
-			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다.", dd, "hong", 2);
+			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다.", dd, "hong", 2, 2);
 			int result = qdao.insertQuestion(session, question);
 			logger.trace("List: {}", question);
 		}
@@ -215,7 +215,7 @@ public class DaoTest {
 		Calendar cd = Calendar.getInstance();
 		Date dd = cd.getTime();
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다. 조치를 취해주세요.", null, "hong", 2);
+			Question question = new Question(2, "신고합니다.", "예약자가 입금을 하지 않습니다. 조치를 취해주세요.", dd, "hong", 2, 2);
 			int result = qdao.updateQuestion(session, question);
 			logger.trace("List: {}", question);
 		}
