@@ -29,7 +29,7 @@
 	</delete>
 
 	<resultMap type="house" id="houseBase">
-		<id column="HOSUE_NI" property="houseNo" />
+		<id column="HOSUE_NO" property="houseNo" />
 		<result column="HOUSE_NAME" property="houseName" />
 		<result column="HOUSE_ADDRESS" property="houseAddress" />
 		<result column="HOUSE_PRICE" property="housePrice" />
