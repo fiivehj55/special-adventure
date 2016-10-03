@@ -2,9 +2,16 @@ package pojo.web.service;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
+import pojo.web.dao.HouseDao;
+import pojo.web.dao.HouseDaoImpl;
 import pojo.web.dto.House;
+import pojo.web.util.DBUtil;
 
 public class HouseServiceImp implements HouseService{
+	HouseDao hdao = HouseDaoImpl.getInstance();
+	
 	//singleton 처리
 	private HouseServiceImp() {
 	}
@@ -16,27 +23,48 @@ public class HouseServiceImp implements HouseService{
 	}
 	@Override
 	public List<House> selectById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		List<House> list =  null;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			list = hdao.selectAllHouse(session);
+		}
+		return list;
 	}
 	@Override
-	public House selectByIdHouse(int houseNo) {
-		// TODO Auto-generated method stub
-		return null;
+	public House selectByNoHouse(int houseNo) {
+		House house	=  null;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			house = hdao.selectByNoHouse(session, houseNo);
+		}
+		return house;
 	}
 	@Override
-	public int insertHouse(House house, String id) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insertHouse(House house) {
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			result = hdao.insertHouse(session, house);
+			if(result ==1)
+				session.commit();
+		}
+		return result;
 	}
 	@Override
 	public int updateHouse(House house) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			result = hdao.updateHouse(session, house);
+			if(result ==1)
+				session.commit();
+		}
+		return result;
 	}
 	@Override
 	public int deleteHouse(int houseNo) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			result = hdao.deleteHouse(session, houseNo);
+			if(result ==1)
+				session.commit();
+		} 
+		return result;
 	}
 }

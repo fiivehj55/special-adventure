@@ -11,7 +11,8 @@ public interface HouseDao {
 	// 하우스 DAO
 	
 	List<House> selectAllHouse(SqlSession session);
-	House selectByIdHouse(SqlSession session, int houseNo);
+	House selectByNoHouse(SqlSession session, int houseNo);
+	List<House> selectByIdHouse(SqlSession session, String id);
 	int insertHouse(SqlSession session, House house);
 	int updateHouse(SqlSession session, House house);
 	int deleteHouse(SqlSession session, int houseNo);

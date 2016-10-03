@@ -32,8 +32,13 @@ public class HouseDaoImpl implements HouseDao {
 	}
 
 	@Override
-	public House selectByIdHouse(SqlSession session, int houseNo) {
+	public List<House> selectByIdHouse(SqlSession session, String id) {
 		String stmt = HOUSE_MAP + "selectByIdHouse";
+		return session.selectList(stmt, id);
+	}
+	@Override
+	public House selectByNoHouse(SqlSession session, int houseNo) {
+		String stmt = HOUSE_MAP + "selectByNoHouse";
 		return session.selectOne(stmt, houseNo);
 	}
 
