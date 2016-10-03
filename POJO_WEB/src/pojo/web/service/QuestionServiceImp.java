@@ -1,7 +1,9 @@
 package pojo.web.service;
 
+import java.util.DuplicateFormatFlagsException;
 import java.util.List;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,14 +39,18 @@ public class QuestionServiceImp implements QuestionService {
 
 	@Override
 	public int add(Question question) {
-		
-		return 0;
+		try (SqlSession session = DBUtil.getInstance().getSession()){
+			int result = dao.insertQuestion(session, question);
+			return result;
+		}
 	}
 
 	@Override
 	public int delete(int questNo) {
-		// TODO Auto-generated method stub
-		return 0;
+		try (SqlSession session = DBUtil.getInstance().getSession()){
+			int result = dao.deleteQuestion(session, questNo);
+			return result;
+		}
 	}
 	
 	
