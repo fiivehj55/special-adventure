@@ -82,8 +82,8 @@ public class DaoTest {
 	@Test
 	public void testDeleteMeber() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			int result = mdao.deleteMember(session, "hong");
-			mdao.deleteMember(session, "hong");
+			int result = mdao.deleteMember(session, "hong", "1234");
+			/*mdao.deleteMember(session, "hong", "1234");*/
 			logger.trace("List: {}", result);
 		}
 	}

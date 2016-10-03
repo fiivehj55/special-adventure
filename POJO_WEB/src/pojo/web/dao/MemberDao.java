@@ -15,6 +15,6 @@ public interface MemberDao {
 	
 	int updateMember(SqlSession session, Member member);
 	
-	int deleteMember(SqlSession session, String memId);
+	int deleteMember(SqlSession session, String memId, String memPassword);
 	
 }

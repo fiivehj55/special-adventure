@@ -23,8 +23,8 @@
         where MEM_ID = #{memId}
     </update>
     
-    <delete id="deleteMember" parameterType="string">
-        delete MEMBER where MEM_ID = #{memId}
+    <delete id="deleteMember" parameterType="map">
+        delete MEMBER where MEM_ID = #{memId} and MEM_PASSWORD = #{memPassword}
     </delete>
     
     <resultMap type="member" id="memBase">
