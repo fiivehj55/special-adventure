@@ -48,8 +48,8 @@ public class RegistHouseDaoImpl implements RegistHouseDao {
 	}
 
 	@Override
-	public int deleteRegistHouse(SqlSession session, int rhId) {
+	public int deleteRegistHouse(SqlSession session, int rhNo) {
 		String stmt = REGIST_HOUSE_MAP + "deleteRegistHouse";
-		return session.update(stmt, rhId);
+		return session.update(stmt, rhNo);
 	}
 }

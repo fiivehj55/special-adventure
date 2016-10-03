@@ -15,6 +15,6 @@ public interface RegistHouseDao {
 	
 	int updateRegistHouse(SqlSession session, RegistHouse rHouse);
 	
-	int deleteRegistHouse(SqlSession session, int rhId);
+	int deleteRegistHouse(SqlSession session, int rhNo);
 
 }
