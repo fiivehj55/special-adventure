@@ -1,15 +1,19 @@
 package pojo.web.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import pojo.web.dao.MemberDao;
 import pojo.web.dao.MemberDaoImpl;
+import pojo.web.dao.MemberDetailDao;
+import pojo.web.dao.MemberDetailDaoImpl;
 import pojo.web.dto.Member;
 import pojo.web.util.DBUtil;
 
 public class MemberServiceImp implements MemberService{
 	MemberDao dao = MemberDaoImpl.getInstance();
-	
+	MemberDetailDao mddao = MemberDetailDaoImpl.getInstance();
 	//singleton 처리
 	private MemberServiceImp() {
 	}
@@ -19,7 +23,14 @@ public class MemberServiceImp implements MemberService{
 	public static MemberServiceImp getInstance() {
 		return instance;
 	}
-	
+	@Override
+	public List<Member> allMember() {
+		List<Member> list = null;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			list = dao.selectAllMember(session);
+		}
+		return list;
+	}
 	@Override
 	public Member login(String id, String password) {
 		Member user = null;
@@ -34,17 +45,26 @@ public class MemberServiceImp implements MemberService{
 	}
 	@Override
 	public int delete(String id, String password) {
-		// TODO Auto-generated method stub
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+	
+		}
 		return 0;
 	}
 	@Override
-	public int join(Member member) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int join(Member member) {	
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			result = dao.insertMember(session, member);
+		}
+		return result;
 	}
 	@Override
-	public int update(Member member, String id) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int update(Member member) {
+		int result = 0;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			result = dao.updateMember(session, member);
+		}
+		return result;
 	}
 }
