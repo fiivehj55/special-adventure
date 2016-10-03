@@ -60,7 +60,7 @@ public class DaoTest {
 			logger.trace("List: {}", member);
 		}
 	}
-	
+
 	@Test
 	public void testInsertMember() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
@@ -98,13 +98,19 @@ public class DaoTest {
 	}
 	
 	@Test
-	public void testSelectByIdHouse() {
+	public void testSelectByNoHouse() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-			House house = hdao.selectByIdHouse(session, 1);
+			House house = hdao.selectByNoHouse(session, 1);
 			logger.trace("List: {}", house);
 		}
 	}
-	
+	@Test
+	public void testSelectByIdHouse() {
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			List<House> house = hdao.selectByIdHouse(session, "hong");
+			logger.trace("List: {}", house);
+		}
+	}
 	@Test
 	public void testInsertHouse() {
 		try(SqlSession session = DBUtil.getInstance().getSession()){

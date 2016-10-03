@@ -47,7 +47,8 @@ public class MemberServiceImp implements MemberService{
 	public int delete(String id, String password) {
 		int result = 0;
 		try(SqlSession session = DBUtil.getInstance().getSession()){
-	
+				
+			
 		}
 		return 0;
 	}
