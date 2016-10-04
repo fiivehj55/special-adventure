@@ -82,24 +82,6 @@ ul.menu:after {
 	<!-- Header -->
 	<div id="header">
 		<div id="nav-wrapper">
-<<<<<<< HEAD
-			<!-- <div id="tabMenu"> -->
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="active"><a href="index2.jsp">호스팅하기</a></li>
-						<li><a href="left-sidebar.html">메시지</a></li>
-						<li><a href="right-sidebar.html">고객센터</a></li>
-						<li><a href="jsp/Login.jsp">로그인</a></li>
-						<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
-						<li><a href="jsp/Table.jsp">게시판</a></li>
-					</ul>
-				</nav>
-			<!-- </div>
-			<div id="tabSubMenu">
-				<div>submenu</div>
-			</div> -->
-=======
 			<!-- Nav -->
 			<nav id="nav">
 				<div id="container">
@@ -117,7 +99,6 @@ ul.menu:after {
 					</ul>
 				</div>
 			</nav>
->>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 		</div>
 
 		<div class="container">
