@@ -19,7 +19,7 @@ input, input[placeholder] {
 #container1 {
 	margin: 100px auto;
 	width: 537px;
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.1); 
 }
 
 ul.menu li {
@@ -112,35 +112,6 @@ ul.menu:after {
 			</div>
 		</div>
 	</div>
-
-	<!-- <div id="header">
-		<div id="nav-wrapper">
-			<nav id="nav">
-				<div id="container1">
-					<ul class="menu">
-						<li><a href="#">메뉴A</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴A</a></li>
-								<li><a href="#">서브메뉴A</a></li>
-								<li><a href="#">서브메뉴A</a></li>
-							</ul></li>
-						<li><a href="#">메뉴B</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴B</a></li>
-								<li><a href="#">서브메뉴B</a></li>
-								<li><a href="#">서브메뉴B</a></li>
-							</ul></li>
-						<li><a href="#">메뉴C</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴C</a></li>
-								<li><a href="#">서브메뉴C</a></li>
-								<li><a href="#">서브메뉴C</a></li>
-							</ul></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</div> -->
 
 	<!-- Featured -->
 	<div id="featured">
