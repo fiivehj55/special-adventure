@@ -1,3 +1,4 @@
+<!-- 게시판 페이지 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<jsp:include page="/jsp/Header.jsp"></jsp:include>
 <h1>게시판</h1>
-<table>
+<table border="1">
 	<tr>
 		<th>글번호</th>
 		<th>제목</th>
