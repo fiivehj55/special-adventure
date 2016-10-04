@@ -29,6 +29,8 @@
 	<p><label>이메일</label>
 	<input type="email" id="email"name="email">
 	<button>OK</button>
+	
+	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
 </body>
 <script></script>
 </html>

@@ -28,6 +28,7 @@
 </table>
 
 
+	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
 </body>
 <script></script>
 </html>
