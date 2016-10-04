@@ -159,6 +159,7 @@ input, input[placeholder] {
 				subMenu.hide();
 			}
 		});
-	});
+	}); 
+	
 </script>
 </html>
