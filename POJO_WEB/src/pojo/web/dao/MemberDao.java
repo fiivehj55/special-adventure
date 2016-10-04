@@ -10,7 +10,7 @@ public interface MemberDao {
 	List<Member> selectAllMember(SqlSession session);
 	
 	Member selectByIdMember(SqlSession session, String memId);
-	
+	String selectId(SqlSession session,String name,String email);
 	int insertMember(SqlSession session, Member member);
 	
 	int updateMember(SqlSession session, Member member);

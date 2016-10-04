@@ -87,6 +87,13 @@ public class DaoTest {
 			logger.trace("List: {}", result);
 		}
 	}
+	@Test
+	public void testFindIdMember(){
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+			String result = mdao.selectId(session, "홍길동", "abc@naver.com");
+			logger.trace("id: {}", result);
+		}
+	}
 	
 	/** HOUSE TEST */
 	@Test

@@ -76,4 +76,13 @@ public class MemberServiceImp implements MemberService{
 		}
 		return result;
 	}
+	@Override
+	public String find(String name,String email) {
+		String member = null;
+		try(SqlSession session = DBUtil.getInstance().getSession()){
+		member =  dao.selectId(session, name, email);
+		}
+		return member;
+
+	}
 }

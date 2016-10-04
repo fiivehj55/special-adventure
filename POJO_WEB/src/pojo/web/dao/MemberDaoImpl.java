@@ -57,5 +57,13 @@ public class MemberDaoImpl implements MemberDao {
 		member.put("memPassword", memPassword);
 		return session.delete(stmt, member);
 	}
-	
+	@Override
+	public String selectId(SqlSession session, String name,String email) {
+		String stmt = MEMBER_MAP + "findId";
+		Map<String, String> member = new HashMap<String, String>();
+		member.put("name", name);
+		member.put("email", email);
+		
+		return session.selectOne(stmt, member);
+	}
 }
