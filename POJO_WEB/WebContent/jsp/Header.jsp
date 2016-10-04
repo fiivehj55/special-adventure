@@ -30,32 +30,32 @@
 			<!-- Nav -->
 			<nav id="nav">
 				<ul class="menu1">
-					<li class="active"><a href="index2.jsp">호스팅하기</a>
+					<li class="active"><a href="<%=request.getContextPath()%>/index2.jsp">호스팅하기</a>
 						<ul class="sub">
 							<li class="active"><a href="#">&nbsp</a></li>
 							<li class="active"><a href="#">&nbsp</a></li>
 						</ul></li>
-					<li><a href="left-sidebar.html">메시지</a>
+					<li><a href="<%=request.getContextPath()%>/left-sidebar.html">메시지</a>
 						<ul class="sub">
 							<li class="active"><a href="#">&nbsp</a></li>
 							<li class="active"><a href="#">&nbsp</a></li>
 						</ul></li>
-					<li><a href="right-sidebar.html">고객센터</a>
+					<li><a href="<%=request.getContextPath()%>/right-sidebar.html">고객센터</a>
 						<ul class="sub">
 							<li class="active"><a href="#">FAQ</a></li>
 							<li class="active"><a href="#">신고 게시판</a></li>
 						</ul></li>
-					<li><a href="jsp/Login.jsp">로그인</a>
+					<li><a href="<%=request.getContextPath()%>/jsp/Login.jsp">로그인</a>
 						<ul class="sub">
 							<li class="active"><a href="#">회원가입</a></li>
 							<li class="active"><a href="#">ID/PASS 찾기</a></li>
 						</ul></li>
-					<li><a href="jsp/Main.jsp">검색된 페이지</a>
+					<li><a href="<%=request.getContextPath()%>/jsp/Main.jsp">검색된 페이지</a>
 						<ul class="sub">
 							<li class="active"><a href="#">&nbsp</a></li>
 							<li class="active"><a href="#">&nbsp</a></li>
 						</ul></li>
-					<li><a href="jsp/Table.jsp">게시판</a>
+					<li><a href="<%=request.getContextPath()%>/jsp/Table.jsp">게시판</a>
 						<ul class="sub">
 							<li class="active"><a href="#">&nbsp</a></li>
 							<li class="active"><a href="#">&nbsp</a></li>
@@ -63,6 +63,7 @@
 				</ul>
 			</nav>
 		</div>
+	</div>	
 </body>
 	<script>
 		

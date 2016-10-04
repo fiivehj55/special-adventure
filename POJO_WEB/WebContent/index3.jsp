@@ -49,10 +49,10 @@ input, input[placeholder] {
 							<li class="active"><a href="#">FAQ</a></li>
 							<li class="active"><a href="#">신고 게시판</a></li>
 						</ul></li>
-					<li><a href="jsp/Login.jsp">로그인</a>
+					<li><a href="<%=request.getContextPath()%>/jsp/MyPage.jsp">마이페이지</a>
 						<ul class="sub">
-							<li class="active"><a href="#">회원가입</a></li>
-							<li class="active"><a href="#">ID/PASS 찾기</a></li>
+							<li class="active"><a href="<%=request.getContextPath()%>/logout">로그아웃</a></li>
+							<li class="active"><a href="#">&nbsp</a></li>
 						</ul></li>
 					<li><a href="jsp/Main.jsp">검색된 페이지</a>
 						<ul class="sub">
