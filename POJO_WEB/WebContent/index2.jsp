@@ -31,21 +31,22 @@ input, input[placeholder] {
 	<!-- Header -->
 	<div id="header">
 		<div id="nav-wrapper">
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li class="active"><a href="index2.jsp">호스팅하기</a></li>
-					<li><a href="left-sidebar.html">메시지</a></li>
-					<li><a href="right-sidebar.html">고객센터</a></li>
-					<li><a href="jsp/Login.jsp">로그인</a></li>
-					<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
-					<li><a href="jsp/Table.jsp">게시판</a></li>
-				</ul>
-			</nav>
-			<div id="subMenu">
-				<div>FAQ</div>
-				<div>신고 게시판</div>
-			</div>
+			<!-- <div id="tabMenu"> -->
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="index2.jsp">호스팅하기</a></li>
+						<li><a href="left-sidebar.html">메시지</a></li>
+						<li><a href="right-sidebar.html">고객센터</a></li>
+						<li><a href="jsp/Login.jsp">로그인</a></li>
+						<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
+						<li><a href="jsp/Table.jsp">게시판</a></li>
+					</ul>
+				</nav>
+			<!-- </div>
+			<div id="tabSubMenu">
+				<div>submenu</div>
+			</div> -->
 		</div>
 
 		<div class="container">
@@ -153,22 +154,8 @@ input, input[placeholder] {
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script>
-	var subMenu = $("#subMenu");
-	subMenu.hide();
-	$(document).ready(function(){
-		$("#nav").hover(
-			function(e){
-				if(e.type=="mouseenter"){
-					subMenu.show();	
-				}
-				subMenu.show();
-			},
-			function(e){
-				if(e.type=="mouseleave"){
-					subMenu.hide();
-				}
-			}
-		);
-	});
+	/* var tabMenu = $("#tabMenu ul>li>a");
+	var tabSubMenu = $("#tabSubMenu>div");
+	tabSubMenu.hide(); */
 </script>
 </html>
