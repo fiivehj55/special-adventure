@@ -30,14 +30,14 @@ public class FindIdServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String m_name = request.getParameter("name");
         String m_email = request.getParameter("email");
-        String m_title = request.getParameter("title");
-        String m_text = request.getParameter("text");
+        /*String m_title = request.getParameter("title");
+        String m_text = request.getParameter("text");*/
 
         try {
             String mail_from = m_name + "<" + m_email + ">";
             String mail_to = "admin<admin@83rpm.com>";
-            String title =  "hosting.83rpm.com 요청사항 :: " + m_title;
-            String contents = "보낸 사람 :: " + m_name + "&lt;" + m_email + "&gt;<br><br>" + m_title + "<br><br>" + m_text;
+            /*String title =  "hosting.83rpm.com 요청사항 :: " + m_title;
+            String contents = "보낸 사람 :: " + m_name + "&lt;" + m_email + "&gt;<br><br>" + m_title + "<br><br>" + m_text;*/
 
             mail_from = new String(mail_from.getBytes("UTF-8"), "UTF-8");
             mail_to = new String(mail_to.getBytes("UTF-8"), "UTF-8");
@@ -60,8 +60,8 @@ public class FindIdServlet extends HttpServlet {
 
             msg.setFrom(new InternetAddress(mail_from));
             msg.setRecipient(Message.RecipientType.TO, new InternetAddress(mail_to));
-            msg.setSubject(title, "UTF-8");
-            msg.setContent(contents, "text/html; charset=UTF-8");
+            //msg.setSubject(title, "UTF-8");
+            //msg.setContent(contents, "text/html; charset=UTF-8");
             msg.setHeader("Content-type", "text/html; charset=UTF-8");
 
             Transport.send(msg);

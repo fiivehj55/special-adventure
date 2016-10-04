@@ -46,7 +46,7 @@ input, input[placeholder] {
 						</ul></li>
 					<li><a href="right-sidebar.html">고객센터</a>
 						<ul class="sub">
-							<li class="active"><a href="#">FAQ</a></li>
+							<li class="active"><a href="<%=request.getContextPath()%>/jsp/FAQ.jsp">FAQ</a></li>
 							<li class="active"><a href="#">신고 게시판</a></li>
 						</ul></li>
 					<li><a href="<%=request.getContextPath()%>/jsp/MyPage.jsp">마이페이지</a>

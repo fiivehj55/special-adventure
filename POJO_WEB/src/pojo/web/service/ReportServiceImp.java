@@ -2,8 +2,6 @@ package pojo.web.service;
 
 import java.util.List;
 
-import org.apache.ibatis.exceptions.PersistenceException;
-import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import pojo.web.dao.ReportDao;
 import pojo.web.dao.ReportDaoImpl;
 import pojo.web.dto.Report;
-import pojo.web.exception.Exception;
 import pojo.web.util.DBUtil;
 
 public class ReportServiceImp implements ReportService {
