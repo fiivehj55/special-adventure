@@ -10,7 +10,6 @@
 <body>
 	<h1>후기 댓글</h1>
 	<fieldset>
-	<tr>
 	<form>
 		<div>
 		<div>
@@ -25,7 +24,6 @@
 		</div>
 		</div>
 	</form>
-	</tr>
 	</fieldset>
 </body>
 <script>
