@@ -24,7 +24,6 @@ input, input[placeholder] {
 	font-weight: bold;
 	text-align: center;
 }
-
 </style>
 
 </head>
@@ -35,16 +34,36 @@ input, input[placeholder] {
 			<!-- Nav -->
 			<nav id="nav">
 				<ul class="menu1">
-					<li class="active"><a href="index2.jsp">호스팅하기</a></li>
-					<li><a href="left-sidebar.html">메시지</a></li>
-					<li><a href="right-sidebar.html">고객센터</a>
-						<ul>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">신고 게시판</a></li>
+					<li class="active"><a href="index2.jsp">호스팅하기</a>
+						<ul class="sub">
+							<li class="active"><a href="#">&nbsp</a></li>
+							<li class="active"><a href="#">&nbsp</a></li>
 						</ul></li>
-					<li><a href="jsp/Login.jsp">로그인</a></li>
-					<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
-					<li><a href="jsp/Table.jsp">게시판</a></li>
+					<li><a href="left-sidebar.html">메시지</a>
+						<ul class="sub">
+							<li class="active"><a href="#">&nbsp</a></li>
+							<li class="active"><a href="#">&nbsp</a></li>
+						</ul></li>
+					<li><a href="right-sidebar.html">고객센터</a>
+						<ul class="sub">
+							<li class="active"><a href="#">FAQ</a></li>
+							<li class="active"><a href="#">신고 게시판</a></li>
+						</ul></li>
+					<li><a href="jsp/Login.jsp">로그인</a>
+						<ul class="sub">
+							<li class="active"><a href="#">회원가입</a></li>
+							<li class="active"><a href="#">ID/PASS 찾기</a></li>
+						</ul></li>
+					<li><a href="jsp/Main.jsp">검색된 페이지</a>
+						<ul class="sub">
+							<li class="active"><a href="#">&nbsp</a></li>
+							<li class="active"><a href="#">&nbsp</a></li>
+						</ul></li>
+					<li><a href="jsp/Table.jsp">게시판</a>
+						<ul class="sub">
+							<li class="active"><a href="#">&nbsp</a></li>
+							<li class="active"><a href="#">&nbsp</a></li>
+						</ul></li>
 				</ul>
 			</nav>
 		</div>
@@ -127,9 +146,8 @@ input, input[placeholder] {
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script>
-	/*  
-	var subMenu1 = $("ul.sub");
-	subMenu1.hide();
+	var subMenu = $(".sub");
+	subMenu.hide();
 	$(document).ready(function() {
 		$("#nav").hover(function(e) {
 			if (e.type == "mouseenter") {
@@ -141,10 +159,6 @@ input, input[placeholder] {
 				subMenu.hide();
 			}
 		});
-	}); */
-	
-	 $(".menu1>a").hover(function() {
-		
-      });
+	});
 </script>
 </html>
