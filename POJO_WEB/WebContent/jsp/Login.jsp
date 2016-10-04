@@ -41,9 +41,9 @@
 	<a href="<%=request.getContextPath()%>/jsp/FindId.jsp"><input type="button" value="아이디 찾기" ></a>
 	<a href="<%=request.getContextPath()%>/jsp/FindPass.jsp">	<input type="button" value="비밀번호 찾기"></a>
 	
-	<input type="submit" value="로그인">
+	<p><input type="submit" value="로그인">
 	<a href="<%=request.getContextPath()%>/jsp/Join.jsp"><input type="button" value="회원가입"></a>
-	</form>
+	</p></form>
 	<% }else{
 		%>
 		<%=user.getMemName() %>
