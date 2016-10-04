@@ -37,7 +37,7 @@ input, input[placeholder] {
 					<ul>
 						<li class="active"><a href="index2.jsp">호스팅하기</a></li>
 						<li><a href="left-sidebar.html">메시지</a></li>
-						<li><a href="right-sidebar.html">고객센터</a></li>
+						<li><a href="jsp/FAQ.jsp">고객센터</a></li>
 						<li><a href="jsp/Login.jsp">로그인</a></li>
 						<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
 						<li><a href="jsp/Table.jsp">게시판</a></li>
