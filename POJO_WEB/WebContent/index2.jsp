@@ -19,13 +19,13 @@ input, input[placeholder] {
 #container1 {
 	margin: 100px auto;
 	width: 537px;
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.1); 
 }
 
 ul.menu li {
 	float: left;
 	width: 179px;
-	height: 48px;
+	height: 50px;
 	background-color: rgba(0,0,0,0.1);
 	position: relative;
 }
@@ -98,7 +98,7 @@ ul.menu:after {
 						<li><a href="jsp/Table.jsp">게시판</a></li>
 					</ul>
 				</div>
-			</nav>
+
 		</div>
 
 		<div class="container">
@@ -112,35 +112,6 @@ ul.menu:after {
 			</div>
 		</div>
 	</div>
-
-	<!-- <div id="header">
-		<div id="nav-wrapper">
-			<nav id="nav">
-				<div id="container1">
-					<ul class="menu">
-						<li><a href="#">메뉴A</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴A</a></li>
-								<li><a href="#">서브메뉴A</a></li>
-								<li><a href="#">서브메뉴A</a></li>
-							</ul></li>
-						<li><a href="#">메뉴B</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴B</a></li>
-								<li><a href="#">서브메뉴B</a></li>
-								<li><a href="#">서브메뉴B</a></li>
-							</ul></li>
-						<li><a href="#">메뉴C</a>
-							<ul class="sub">
-								<li><a href="#">서브메뉴C</a></li>
-								<li><a href="#">서브메뉴C</a></li>
-								<li><a href="#">서브메뉴C</a></li>
-							</ul></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</div> -->
 
 	<!-- Featured -->
 	<div id="featured">
@@ -203,35 +174,9 @@ ul.menu:after {
 			</section>
 		</div>
 	</div>
-
-	<!-- Footer -->
-	<!--  footerì ë´ì©ê³¼ snsì°ê²° ìì´ì½ -->
-	<div id="footer">
-		<div class="container">
-			<section>
-				<header>
-					<h2>Get in touch</h2>
-					<span class="byline">Integer sit amet pede vel arcu aliquet
-						pretium</span>
-				</header>
-				<ul class="contact">
-					<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-					<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-					<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
-					<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
-				</ul>
-			</section>
-		</div>
-	</div>
-
-	<!-- Copyright -->
-	<div id="copyright">
-		<div class="container">
-			Design: <a href="http://templated.co">TEMPLATED</a> Images: <a
-				href="http://unsplash.com">Unsplash</a> (<a
-				href="http://unsplash.com/cc0">CC0</a>
-		</div>
-	</div>
+	
+	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
+	
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script>
