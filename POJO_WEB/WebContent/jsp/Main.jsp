@@ -7,14 +7,21 @@
 </head>
 <body>
 	<jsp:include page="/jsp/Header.jsp"></jsp:include>
-<h1>사랑방손님</h1>
-<input id="text_box" type="text" placeholder="두정동 또는 건물이름을 검색하세요">
+	
+	<h1>사랑방손님</h1>
+	<input id="text_box" type="text" placeholder="두정동 또는 건물이름을 검색하세요">
 
-<h3>지금 인기있는 숙소를 만나보세요!</h3>
-<table border=1 width=500 height=200>
-<tr><td width= 250>사진</td><td width= 250>사진</td>
-<tr><td>사진</td><td>사진</td>
-</table>
+	<h3>지금 인기있는 숙소를 만나보세요!</h3>
+	<table border=1 width=500 height=200>
+		<tr>
+			<td width=250>사진</td>
+			<td width=250>사진</td>
+		</tr>
+		<tr>
+			<td>사진</td>
+			<td>사진</td>
+		</tr>
+	</table>
 
 
 </body>

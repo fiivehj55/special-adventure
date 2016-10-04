@@ -1,47 +1,27 @@
-<%@page import="pojo.web.dto.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
-
-<style >
-	label{
-		width: 100px;
-		display: inline-block;
-	}
-	
-	.auto_center{
-	width:400px;
-	height:400px;
-	padding:20px;
-	margin:200px auto;
-	
-	}
-</style>
-<div class=auto_center>
-	호스팅하기
-	메세지
-	고객센터
-	
-	<%Member user =(Member)session.getAttribute("user");%>
-	<% if(user==null){%>
-	<form action="<%=request.getContextPath()%>/login" method="post">
-	<p><label>ID: </label>
-	<input type="text" id = "id" name= "id"></p>
-	<label>PASS: </label>
-	<input type="password" id = "password" name= "password">
-	
-	<p>
-<a href="<%=request.getContextPath()%>/jsp/FindId.jsp"><input type="button" value="아이디 찾기" >
-<a href="<%=request.getContextPath()%>/jsp/FindPass.jsp">	<input type="button" value="비밀번호 찾기">
-	
-	<input type="submit" value="로그인">
-	<a href="<%=request.getContextPath()%>/jsp/Join.jsp"><input type="button" value="회원가입">
-	</a>
-	</form>
-	<% }else{
-		%>
-		<%=user.getMemName() %>
-		<img src="<%=request.getContextPath()%>/css/userimage/<%=user.getMemImg()%>">
-		<% 
-		}	%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<link rel="stylesheet" href="css/skel-noscript.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style-desktop.css" />
+</head>
+<body>
+	<h1>header</h1>
+	<hr/>
+</body>
+	<script>
 		
-</div>
+	</script>
+</html>
