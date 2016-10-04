@@ -52,5 +52,7 @@
 		}	%>
 		
 </div>
+
+	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
 </body>
 </html>
