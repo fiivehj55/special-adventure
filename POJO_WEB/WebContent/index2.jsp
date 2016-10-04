@@ -14,11 +14,8 @@ input, input[placeholder] {
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link
-	href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900'
-	rel='stylesheet' type='text/css'>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/skel.min.js"></script>
 <script src="js/skel-panels.min.js"></script>
 <script src="js/init.js"></script>
@@ -31,7 +28,7 @@ input, input[placeholder] {
 	<!-- Header -->
 	<div id="header">
 		<div id="nav-wrapper">
-			<!-- <div id="tabMenu"> -->
+			<div id="tabMenu">
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
@@ -43,10 +40,10 @@ input, input[placeholder] {
 						<li><a href="jsp/Table.jsp">게시판</a></li>
 					</ul>
 				</nav>
-			<!-- </div>
+			</div>
 			<div id="tabSubMenu">
 				<div>submenu</div>
-			</div> -->
+			</div>
 		</div>
 
 		<div class="container">
@@ -154,8 +151,8 @@ input, input[placeholder] {
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script>
-	/* var tabMenu = $("#tabMenu ul>li>a");
+	var tabMenu = $("#tabMenu ul>li>a");
 	var tabSubMenu = $("#tabSubMenu>div");
-	tabSubMenu.hide(); */
+	tabSubMenu.hide();
 </script>
 </html>
