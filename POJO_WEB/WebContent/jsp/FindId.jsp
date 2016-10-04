@@ -24,13 +24,15 @@
 
 </head>
 <body class="auto_center">
+<form action="<%=request.getContextPath() %>/FindId" method="post">
 <h1>아이디 찾기</h1>
 	<p><label>이름: </label>
-	<input type="text" id = "id" name= "id"></p>
+	<input type="text" id = "name" name= "name"></p>
 	<p><label>이메일</label>
 	<input type="email" id="email"name="email">
-	<button>OK</button>
-
+	<input type="submit" value="확인">
+	<button>뒤로가기</button>
+</form>
 	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
 </body>
 <script></script>

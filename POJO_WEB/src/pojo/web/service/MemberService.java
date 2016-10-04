@@ -10,5 +10,5 @@ public interface MemberService {
 	public int update(Member member);
 	public int delete(String id,String password);
 	public List<Member> allMember();
-	
+	public String find(String name,String email);
 }

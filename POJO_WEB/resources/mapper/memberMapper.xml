@@ -26,7 +26,12 @@
     <delete id="deleteMember" parameterType="map">
         delete MEMBER where MEM_ID = #{memId} and MEM_PASSWORD = #{memPassword}
     </delete>
-    
+     <select id="findId" parameterType="map" resultType="string">
+        select MEM_ID
+        from MEMBER
+        where MEM_NAME = #{name} and
+        MEM_EMAIL = #{email}
+    </select>
     <resultMap type="member" id="memBase">
 		<id column="MEM_ID" property="memId" />
 		<result column="MEM_NAME" property="memName" />

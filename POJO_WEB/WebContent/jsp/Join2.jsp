@@ -137,7 +137,7 @@ ul.menu:after {
 	<!-- Main -->
 	<div id="main">
 
-		<div id="content" class="container">
+		<div id="content" class="auto_center">
 
 		<h1>회원가입</h1>
 		
