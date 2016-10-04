@@ -25,7 +25,7 @@ input, input[placeholder] {
 ul.menu li {
 	float: left;
 	width: 179px;
-	height: 48px;
+	height: 50px;
 	background-color: rgba(0,0,0,0.1);
 	position: relative;
 }
