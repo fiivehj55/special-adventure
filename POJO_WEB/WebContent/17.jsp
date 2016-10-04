@@ -10,7 +10,7 @@
 	<fieldset>
 	<div>
 		<!-- <img src = ""> -->
-		<td width=250>house 외관 사진</td>
+		
 	</div>
 	<div>
 		<div>Daegun 프로필 사진</div>
