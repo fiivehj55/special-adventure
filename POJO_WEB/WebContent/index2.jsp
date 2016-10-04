@@ -82,24 +82,6 @@ ul.menu:after {
 	<!-- Header -->
 	<div id="header">
 		<div id="nav-wrapper">
-<<<<<<< HEAD
-			<!-- <div id="tabMenu"> -->
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="active"><a href="index2.jsp">호스팅하기</a></li>
-						<li><a href="left-sidebar.html">메시지</a></li>
-						<li><a href="right-sidebar.html">고객센터</a></li>
-						<li><a href="jsp/Login.jsp">로그인</a></li>
-						<li><a href="jsp/Main.jsp">검색된 페이지</a></li>
-						<li><a href="jsp/Table.jsp">게시판</a></li>
-					</ul>
-				</nav>
-			<!-- </div>
-			<div id="tabSubMenu">
-				<div>submenu</div>
-			</div> -->
-=======
 			<!-- Nav -->
 			<nav id="nav">
 				<div id="container">
@@ -117,7 +99,6 @@ ul.menu:after {
 					</ul>
 				</div>
 			</nav>
->>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 		</div>
 
 		<div class="container">
@@ -222,35 +203,9 @@ ul.menu:after {
 			</section>
 		</div>
 	</div>
-
-	<!-- Footer -->
-	<!--  footerì ë´ì©ê³¼ snsì°ê²° ìì´ì½ -->
-	<div id="footer">
-		<div class="container">
-			<section>
-				<header>
-					<h2>Get in touch</h2>
-					<span class="byline">Integer sit amet pede vel arcu aliquet
-						pretium</span>
-				</header>
-				<ul class="contact">
-					<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-					<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-					<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
-					<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
-				</ul>
-			</section>
-		</div>
-	</div>
-
-	<!-- Copyright -->
-	<div id="copyright">
-		<div class="container">
-			Design: <a href="http://templated.co">TEMPLATED</a> Images: <a
-				href="http://unsplash.com">Unsplash</a> (<a
-				href="http://unsplash.com/cc0">CC0</a>
-		</div>
-	</div>
+	
+	<jsp:include page="/jsp/Footer.jsp"></jsp:include>
+	
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script>
