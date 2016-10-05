@@ -88,39 +88,6 @@ ul.menu:after {
 <body>
 <jsp:include page="/jsp/Header.jsp"></jsp:include>
 <div class="auto_center">
-	<!-- Header -->
-	<div id="header">
-		<div id="nav-wrapper">
-			<!-- Nav -->
-			<nav id="nav">
-				<div id="container">
-					<ul class="menu">
-						<li class="active"><a href="/index2.jsp">호스팅하기</a></li>
-						<li><a href="/left-sidebar.html">메시지</a></li>
-						<li><a href="/right-sidebar.html">고객센터</a>
-							<ul class="sub">
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">신고 게시판</a></li>
-							</ul></li>
-						<li><a href="/jsp/Login.jsp">로그인</a></li>
-						<li><a href="/jsp/Main.jsp">검색된 페이지</a></li>
-						<li><a href="/jsp/Table.jsp">게시판</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-
-		<div class="container">
-
-			<!-- Logo -->
-			<div id="logo">
-				<h1>
-					<a href="#">사랑방손님</a>
-				</h1>
-				<span class="tag">By POJO</span>
-			</div>
-		</div>
-	</div>
 	
 	<%Member user =(Member)session.getAttribute("user");%>
 	<% if(user==null){%>
