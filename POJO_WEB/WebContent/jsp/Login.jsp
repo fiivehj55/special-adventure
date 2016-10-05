@@ -34,35 +34,13 @@ input, input[placeholder] {
 <link rel="stylesheet" href="../css/style-desktop.css" />
 
 </head>
-<<<<<<< HEAD
-<body>
-<jsp:include page="/jsp/Header.jsp"></jsp:include>
-<div class="auto_center">
-	
-	<%Member user =(Member)session.getAttribute("user");%>
-	<% if(user==null){%>
-	<form action="<%=request.getContextPath()%>/login" method="post">
-	<p><label>ID: </label>
-	<input type="text" id = "id" name= "id"></p>
-	<label>PASS: </label>
-	<input type="password" id = "password" name= "password">
-	
-	<p>
-	<a href="<%=request.getContextPath()%>/jsp/FindId.jsp"><input type="button" value="아이디 찾기" ></a>
-	<a href="<%=request.getContextPath()%>/jsp/FindPass.jsp">	<input type="button" value="비밀번호 찾기"></a>
-	
-	<p><input type="submit" value="로그인">
-	<a href="<%=request.getContextPath()%>/jsp/Join.jsp"><input type="button" value="회원가입"></a>
-	</p></form>
-	<% }else{
-=======
+
 <body class="homepage">
 	<jsp:include page="/jsp/Header.jsp"></jsp:include>
 	<div class="auto_center">
 
 		<%
 			Member user = (Member) session.getAttribute("user");
->>>>>>> branch 'master' of https://github.com/fiivehj55/special-adventure.git
 		%>
 		<%
 			if (user == null) {
