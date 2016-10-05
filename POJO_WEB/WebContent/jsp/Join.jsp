@@ -188,12 +188,11 @@ ul.menu:after {
 
 
 	<!-- Footer -->
-	<!--  footerì ë´ì©ê³¼ snsì°ê²° ìì´ì½ -->
 	<div id="footer">
 		<div class="container">
 			<section>
 				<header>
-					<h2>Get in touch</h2>
+					<!-- <h2>Get in touch</h2> -->
 					<span class="byline">Integer sit amet pede vel arcu aliquet
 						pretium</span>
 				</header>

@@ -20,16 +20,14 @@
 	margin:200px auto;
 	
 	
+	
 	}
 </style>
 </head>
 <body>
 <jsp:include page="/jsp/Header.jsp"></jsp:include>
 <div class=auto_center>
-	호스팅하기
-	메세지
-	고객센터
-	
+
 	<%Member user =(Member)session.getAttribute("user");%>
 	<% if(user==null){%>
 	<form action="<%=request.getContextPath()%>/login" method="post">
