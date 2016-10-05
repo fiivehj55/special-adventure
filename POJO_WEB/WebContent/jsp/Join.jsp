@@ -122,8 +122,8 @@ ul.menu:after {
 		</div>
 
 		<div class="container">
-
-			<!-- Logo -->
+		
+		
 			<div id="logo">
 				<h1>
 					<a href="#">사랑방손님</a>
